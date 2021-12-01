@@ -1,0 +1,16 @@
+.navbar-collapse::-webkit-scrollbar {
+    width: 15px;
+}
+ 
+.navbar-collapse::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,1); 
+    /*border-radius: 10px;*/
+    background-color: #ffffff;
+}
+ 
+.navbar-collapse::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    background-color: rgba(102, 102, 102, 1);
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+}

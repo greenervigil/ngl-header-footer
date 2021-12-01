@@ -1,0 +1,31 @@
+@media (max-width: 991px) {
+	body{
+	   padding-bottom: 168px;
+	}
+
+	#header_include .title a {
+		background: url(../images/NGL-Cengage-Logo-tablet.png) left center no-repeat;
+	}
+
+	.container {
+		padding: 0px 15px;
+	}
+
+	/*-- Nav bar --*/
+
+	#headerLeftMenu button.btnMenuImg{
+	    background: url(../images/btn_menu_tablet.png) center no-repeat;
+	}
+
+	#headerLeftMenu button.btnSearchImg{
+	    background: url(../images/btn_search_tablet.png) center no-repeat;
+	}
+
+
+		/*----------------- School Header --------------*/
+	#header_include.school .title a {
+	    background: url(../images/NGL-Cengage-school-Logo-tablet.png) left center no-repeat;
+	}
+
+
+}

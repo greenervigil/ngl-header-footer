@@ -1,0 +1,357 @@
+body{
+	background-color: #FFF;
+	height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    /*position: relative;*/
+    float: left;
+    font: 400 12px/1 'Open Sans', Arial, Helvetica, sans-serif;
+    padding-bottom: 170px;
+    margin-top: 71px;
+}
+
+/*.eltBody{
+    padding-bottom: 166px;
+}*/
+
+/*.schoolBody{
+    padding-bottom: 185px;
+}*/
+
+html{
+    min-height: 100%;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.endeca-slot {
+    display: block;
+    position: inherit;
+}
+
+#pageContainer, #NGLRedesignpageContainer{
+    display: initial;
+    /*margin-bottom: 3px;*/
+    /*margin-top: 71px;*/
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.row{
+    margin:0px;
+    width: 100% !important;
+    height: 100%;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4,
+ .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, 
+ .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10,
+  .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+    padding:0px;
+}
+
+#header_include{
+    height :70px;
+    border-bottom: 2px solid rgb(156, 156, 156);
+    margin-bottom: 1px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background-color: #ffffff;
+    min-height: 70px;
+    z-index: 99;
+}
+
+.mainPageContainer{
+    max-width: 1056px;
+    margin: 0 auto;
+}
+.container {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#header_include .title a {
+    background: url(../images/NGL-Cengage-Logo-desktop.png) left center no-repeat;
+    font-size: 0;
+    height: 52px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+
+.market-title {
+    font-size: 20px;
+    color: rgb(51, 51, 51);
+    font-weight: 800;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.largeTitle{
+	display: block;
+}
+
+.smallTitle{
+	display: none;
+}
+
+
+/*-- Nav bar --*/
+
+#headerLeftMenu button{
+    width: 38px;
+    padding: 0px;
+    border: none;
+    min-height: 46px;
+}
+
+#headerLeftMenu button:focus{
+    outline: none;
+}
+
+#headerLeftMenu button.btnMenuImg{
+    background: url(../images/btn_menu.png) center no-repeat;
+}
+
+#headerLeftMenu button.btnSearchImg{
+    background: url(../images/btn_search.png) center no-repeat;
+}
+
+#header_include .navbar{
+    margin: 0px;
+    margin-top: 9px;
+}
+
+#header_include .navbar-header {
+    float: none;
+}
+#header_include .navbar-toggle {
+    display: block;
+}
+#header_include .navbar-collapse.collapse {
+    display: none!important;
+}
+#header_include .navbar-collapse.collapse.in {
+    display: block!important;
+}
+#header_include .navbar-nav {
+    float: none!important;
+}
+#header_include .navbar-nav>li {
+    float: none;
+    z-index: 1;
+    margin-top: 2px;
+}
+
+#header_include .headerLeftMenuSubmenu.navbar-collapse{
+    max-height: none;
+}
+
+/*------------ Header Menu  ----------------------- */
+#headerLeftMenuLinks>li {
+	border-width: 1px;
+	border-color: rgb(255, 255, 255);
+	border-style: solid;
+	border-radius: 3px;
+	background-color: rgb(102, 102, 102);
+	height: 42px;
+    cursor: pointer;
+}
+
+#headerLeftMenuLinks{
+    /*height: 270px !important;*/
+    max-height: 440px;
+    overflow-y: auto!important;
+}
+
+/*#headerLeftMenuLinks ul{
+    overflow-y: scroll !important;
+    height: 250px !important;
+}*/
+
+#headerLeftMenuLinks>li a {
+	font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 1.4;
+    text-align: left;
+    padding: 8px;
+    vertical-align: middle;
+    display: flex;
+    cursor: pointer;
+}
+
+#headerLeftMenuLinks>li:first-child{
+    background-color: #941600;
+}
+
+#headerLeftMenuLinks>li:hover,#headerLeftMenuLinks>li:focus,#headerLeftMenuLinks>li>a:hover, #headerLeftMenuLinks>li>a:focus{
+    background-color: rgb(102, 102, 102);
+}
+
+#headerLeftMenuLinks>li:first-child:hover, #headerLeftMenuLinks>li:first-child a:hover,
+#headerLeftMenuLinks>li:first-child a:focus, #headerLeftMenuLinks>li:first-child:focus{
+    background-color: #941600;
+}
+
+ul#headerLeftMenuLinks{
+	padding: 0px;
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    margin-top: 12px;
+    z-index: 9;
+}
+
+#headerLeftMenu .navbar-header{
+    float: right;
+}
+
+#headerLeftMenu .navbar-header>span#menuText{
+	font-weight: 900;
+    font-size: 9px;
+    line-height: 2px;
+    display: inherit;
+}
+
+#headerMenuContainer span#menuText{
+	text-align: center;
+}
+
+.fa.menuLinksIcon{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: rgb(102, 102, 102);
+    background-color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-style: normal;
+    cursor: pointer;
+    line-height: 19px;
+}
+
+.menuLinksText{
+    margin-left: 6px;
+}
+
+.visibilityHidden{
+    visibility: hidden;
+}
+
+
+.subMenuparent.collapsed > i{
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+ul.headerLeftMenuSubmenu{
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.headerLeftMenuSubmenu>li{
+    border: 1px solid rgb(148, 151, 153);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 1px;
+    height: 42px;
+}
+
+ul.headerLeftMenuSubmenu>li>a{
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+    padding: 10px 15px;
+}
+
+ul.headerLeftMenuSubmenu>li>a:hover, ul.headerLeftMenuSubmenu>li>a:focus{
+    background-color: transparent;
+}
+
+/* ------------ Search container --------------------- */
+
+#headerSearchContainer{
+   margin-right: 5%;
+}
+
+ul#headerLeftSearchLinks{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    width: 100%;
+    margin-top: 12px;
+    z-index: 9;
+    /*height: 440px !important;*/
+    max-height: 440px;
+    overflow-y: auto!important;
+}
+
+#header-search{
+	border: 1px solid rgb(0, 114, 163);
+	border-radius: 3px;
+	background-color: rgb(255, 255, 255);
+	height: 42px;
+	width: 100%;
+    padding-left: 38px;
+    font-size: 12px;
+	color: rgb(0, 0, 0);
+	line-height: 1.2;
+	text-align: left;
+}
+
+button#header-submit {
+    position: absolute;
+    border: none;
+    height: 42px;
+    top: 0;
+    background: transparent;
+    color: #0071a2;
+    width: 38px;
+    font-size: 28px;
+    padding: 1px 6px;
+}
+
+#headerLeftSearchLinks>li:not(:first-child){
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 3px;
+	background-color: rgb(0, 114, 163);
+	height: 42px;
+}
+
+#headerLeftSearchLinks>li>a{
+	font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    text-align: left;
+    padding: 8px;
+     padding-left: 38px;
+    height: 100%;
+}
+
+ul#headerLeftSearchLinks>li>a:hover, ul#headerLeftSearchLinks>li>a:focus{
+    background-color: transparent;
+}
+
+
+/*----------------- School Header --------------*/
+#header_include.school .title a {
+    background: url(../images/NGL-Cengage-school-Logo-desktop.png) left center no-repeat;
+    font-size: 0;
+    height: 58px;
+    left: 0;
+    position: absolute;
+    top: 6px;
+    width: 100%;
+}

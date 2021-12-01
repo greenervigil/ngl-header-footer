@@ -1,0 +1,78 @@
+@media (max-width: 991px) {
+	.footerContainer {
+		padding: 0px 43px;
+	}
+
+	.footerOpenContainer {
+	    padding: 10px 0px 5px;
+	}
+
+	#footerHeaderText{
+		font-size: 20px;
+		line-height: 1.4;
+		-moz-transform: matrix( 1.00677490234375,0,0,1,0,0);
+		-webkit-transform: matrix( 1.00677490234375,0,0,1,0,0);
+		-ms-transform: matrix( 1.00677490234375,0,0,1,0,0);
+	    margin: 10px 0px 10px;
+	}
+
+	.footersubHeader{
+		font-size: 25px;
+		line-height: 1.4;
+		text-align: left;
+	}
+
+	#schoolFooterMiddleHeaderText{
+		font-size: 14px;
+	    margin: 10px 0px 13px;
+	}
+
+	.schoolFootercolumnContainer.footercolumnContainer li{
+		width: 98px;
+	}
+	
+	.schoolFootercolumnContainer.footercolumnContainer li a{
+		padding-top: 0px;
+	}
+
+	.schoolFootercolumnContainer .countryUSText {
+	    margin: 0px 10px 15px 0px;
+	}
+
+	/*-------------- Footer menu toggle --------------------*/
+	#footerCollapseMainContainer{
+		/*background-image: url(../images/footeryellowTablet.png);*/
+	}
+
+
+	/*-- Elt Footer--*/
+	#EltfooterHeaderText{
+		font-size: 20px;
+	}
+
+	#footerMiddleHeaderText{
+		font-size: 12px;
+		line-height: 27px;
+	}
+
+	.EltfooterRightText{
+		font-size: 18px;
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		line-height: 1.556;
+		text-align: right;
+	}
+
+	.EltfooterOpenContainer .countryUSText{
+		font-size: 12px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer ul li a {
+		font-size: 12px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer{
+		margin-right: 10px;
+		width: initial;
+	}
+}

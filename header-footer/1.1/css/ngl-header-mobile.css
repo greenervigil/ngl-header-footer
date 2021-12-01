@@ -1,0 +1,120 @@
+@media (max-width: 767px) {
+	body{
+		padding-bottom: 300px;
+	}
+	/*#header_include .title a{
+		background: url(../images/NGL-Cengage-Logo-mobile.png) left center no-repeat;
+	}*/
+
+	.container {
+		padding: 0px 12px;
+	}
+
+	.largeTitle{
+		display: none;
+	}
+	.smallTitle{
+		display: block;
+	}
+
+	#headerLeftMenuLinks{
+		height: 400px !important;
+	}
+
+	#headerLeftMenu button.btnMenuImg{
+	    background: url(../images/btn_menu_mobile.png) center no-repeat;
+	}
+
+	#headerLeftMenu button.btnSearchImg{
+	    background: url(../images/btn_search_mobile.png) center no-repeat;
+	}
+
+	#headerLeftMenu button{
+	    width: 37px;
+	    padding: 0px;
+	    border: none;
+	    min-height: 43px;
+	}
+
+	/*----------------- School Header --------------*/
+	#header_include.school .title a {
+	    background: url(../images/NGL-Cengage-school-Logo-mobile.png) left center no-repeat;
+	}
+
+	.market-title {
+		font-size: 18px;
+		-moz-transform: matrix( 1.146875,0,0,1.13953488372093,0,0);
+		-webkit-transform: matrix( 1.146875,0,0,1.13953488372093,0,0);
+		-ms-transform: matrix( 1.146875,0,0,1.13953488372093,0,0);
+	}
+
+	.logoMobWidth {
+	    width: 55%;
+	}
+
+	.marketTitleMobWidth {
+	    width: 17%;
+	}
+}
+
+@media (max-width: 375px) {
+
+	#header_include .title a {
+	    background-size: 100%;
+	}
+
+	/*----------------- School Header --------------*/
+
+	/*#header_include.school .title a {
+	    background-size: 100%;
+	}*/
+
+	#header_include.school .navbar{
+		float: right;
+		width: 100%;	
+	}
+
+	#header_include.school .logoMobWidth {
+	    width: 63%;
+	}
+
+	#header_include.school #headerLeftMenu {
+	    width: 25%;
+	}
+
+	.marketTitleMobWidth {
+	    width: 12%;
+	}
+
+}
+
+@media (min-width: 326px) and (max-width: 374px) {
+	body{
+		padding-bottom: 327px;
+	}
+}
+
+@media (max-width: 325px) {
+	body{
+		padding-bottom: 327px;
+	}
+}
+
+@media (max-width: 340px) {
+	/*----------------- School Header --------------*/
+	#header_include.school .logoMobWidth {
+	    width: 60%;
+	}
+
+	.marketTitleMobWidth {
+	    width: 13%;
+	}
+
+	#header_include.school .title a {
+	    background-size: 100%;
+	}
+
+	#header_include.school #headerLeftMenu {
+	    width: 27%;
+	}
+}

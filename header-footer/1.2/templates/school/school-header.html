@@ -1,0 +1,219 @@
+<!-- SCHOOL HEADER -->
+<script type="text/javascript">	
+	var ImgPath = protocol + "//" + env + "cdn.cengage.com/static/sites/ngl/header-footer/"+version+"/images/";
+	
+	$(document).ready(function() {    
+    	checkSize('#NGLSchoolImg','NGL-Cengage-school-Logo');    
+    	setBtnImg('.btnMenuImg','btn_menu.jpg');
+    	setBtnImg('.btnSearchImg','btn_search.jpg');
+    	$(window).resize(checkSize);
+    	$(window).resize(setBtnImg);
+	});
+
+	function checkSize(imgId, imgName){
+		var schoolHeaderLogo;
+		if (window.matchMedia('(min-width: 992px)').matches){
+			var schoolHeaderLogo = ImgPath+imgName+'-desktop.png';			
+		}else if (window.matchMedia('(max-width: 767px)').matches){
+			var schoolHeaderLogo = ImgPath+imgName+'-mobile.png';
+		}else{
+			var schoolHeaderLogo = ImgPath+imgName+'-tablet.png';
+		}
+
+		$(imgId).attr('src',schoolHeaderLogo);
+	}
+	function setBtnImg(imgId, imgName){
+		var menuBtnImg = ImgPath+imgName;			
+		$(imgId).css('background-image','url(' +menuBtnImg+ ')');
+	}
+
+</script>
+<div class="mainPageContainer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8 col-sm-5 col-md-4 col-lg-4 logoMobWidth">
+				<div class="title">
+					<a href="//ngl.cengage.com">
+						<img src="" alt="National Geographic Learning" id="NGLSchoolImg">
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-1 col-sm-3 col-md-4 col-lg-4 marketTitleMobWidth">
+				<div class="market-title largeTitle">Grades K-12</div>
+				<div class="market-title smallTitle">K12</div>
+			</div>
+			<div class="col-xs-3 col-sm-4 col-md-4 col-lg-4" id="headerLeftMenu">
+				<nav class="navbar" role="navigation">
+					<div class="navbar-header" id="headerMenuContainer">
+						<button type="button" class="btnMenuImg" data-toggle="collapse" data-target="#headerLeftMenuLinks">
+							
+						</button>
+					</div>
+					<div class="navbar-header" id="headerSearchContainer">
+						<button type="button" class="btnSearchImg" data-toggle="collapse" data-target="#headerLeftSearchLinks">
+							
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-5 col-sm-offset-7 col-md-4 col-md-offset-8 col-lg-4 col-lg-offset-8">
+				<ul class="collapse navbar-collapse nav navbar-nav mainSearchMenuGA" id="headerLeftSearchLinks">
+					<li>
+						<form id="ngl-search" name="CenSearch" target="_parent" method="post" _lpchecked="1">
+							<button id="header-submit" type="submit">
+								<i class="fa fa-search"></i>
+							</button>
+							<input id="header-search" type="text" maxlength="60" autocomplete="off" size="50" placeholder="Search by title, author, ISBN, or keyword">
+						</form>	
+					</li>
+				</ul>
+
+				<ul class="collapse navbar-collapse nav navbar-nav mainMenuGA" id="headerLeftMenuLinks">
+					<li>
+						<a href="https://www.cengage.com/repfinder/natgeo?ngl=true/" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">Contact Sales Representative</span>
+						</a>
+					</li>
+					<li>
+						<a href="http://ngl.cengage.com/contact/sch" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">Customer Support</span>
+						</a>
+					</li>
+					<li>
+						<a href="http://ngl.cengage.com/support/sch/" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">Digital Support</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://ngl.cengage.com/assets/html/SampleNow/index.html" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">SampleNow</span>
+						</a>
+					</li>
+					<li>
+						<a href="http://ngl.cengage.com/access/sch/" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">Companion Sites</span>
+						</a>
+					</li>
+					<!-- <li>
+						<a href="http://ngl.cengage.com/assets/html/digital/" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">eSamples</span>
+						</a>
+					</li> -->
+					<li>
+						<a href="http://ngl.cengage.com/correlations" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">Correlations</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://eltngl.com" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">ELT Adult and Higher Education</span>
+						</a>
+					</li>
+					<li>
+						<a href="http://ngl.cengage.com/correlations/research" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">Evidence-Based Research</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="subMenuparent collapsed" data-toggle="collapse" data-target="#hamburgerSubmenu1">
+							<i class="fa fa-caret-up menuLinksIcon" aria-hidden="true"></i>
+							<span class="menuLinksText">State Pages</span>
+						</a>
+					</li>
+					<ul class="collapse navbar-collapse nav navbar-nav headerLeftMenuSubmenu" id="hamburgerSubmenu1">
+						<li><a href="/search/states/al">Alabama</a></li>
+						<li><a href="/search/states/ak">Alaska</a></li>
+						<li><a href="/search/states/az">Arizona</a></li>
+						<li><a href="/search/states/ar">Arkansas</a></li>
+						<li><a href="/search/states/ca">California</a></li>
+						<li><a href="/search/states/co">Colorado</a></li>
+						<li><a href="/search/states/ct">Connecticut</a></li>
+						<li><a href="/search/states/de">Delaware</a></li>
+						<li><a href="/search/states/fl">Florida</a></li>
+						<li><a href="/search/states/ga">Georgia</a></li>
+						
+						<li><a href="/search/states/hi">Hawaii</a></li>
+						<li><a href="/search/states/id">Idaho</a></li>
+						<li><a href="/search/states/il">Illinois</a></li>
+						<li><a href="/search/states/in">Indiana</a></li>
+						<li><a href="/search/states/ia">Iowa</a></li>
+						<li><a href="/search/states/ks">Kansas</a></li>
+						<li><a href="/search/states/ky">Kentucky</a></li>
+						<li><a href="/search/states/la">Louisiana</a></li>
+						<li><a href="/search/states/me">Maine</a></li>
+						<li><a href="/search/states/md">Maryland</a></li>
+						
+						<li><a href="/search/states/ma">Massachusetts</a></li>
+						<li><a href="/search/states/mi">Michigan</a></li>
+						<li><a href="/search/states/mn">Minnesota</a></li>
+						<li><a href="/search/states/ms">Mississippi</a></li>
+						<li><a href="/search/states/mo">Missouri</a></li>
+						<li><a href="/search/states/mt">Montana</a></li>
+						<li><a href="/search/states/ne">Nebraska</a></li>
+						<li><a href="/search/states/nv">Nevada</a></li>
+						<li><a href="/search/states/nh">New Hampshire</a></li>
+						<li><a href="/search/states/nj">New Jersey</a></li>
+						
+						<li><a href="/search/states/nm">New Mexico</a></li>
+						<li><a href="/search/states/ny">New York</a></li>
+						<li><a href="/search/states/nc">North Carolina</a></li>
+						<li><a href="/search/states/nd">North Dakota</a></li>
+						<li><a href="/search/states/oh">Ohio</a></li>
+						<li><a href="/search/states/ok">Oklahoma</a></li>
+						<li><a href="/search/states/or">Oregon</a></li>
+						<li><a href="/search/states/pa">Pennsylvania</a></li>
+						<li><a href="/search/states/ri">Rhode Island</a></li>
+						<li><a href="/search/states/sc">South Carolina</a></li>
+						
+						<li><a href="/search/states/sd">South Dakota</a></li>
+						<li><a href="/search/states/tn">Tennessee</a></li>
+						<li><a href="/search/states/tx">Texas</a></li>
+						<li><a href="/search/states/ut">Utah</a></li>
+						<li><a href="/search/states/vt">Vermont</a></li>
+						<li><a href="/search/states/va">Virginia</a></li>
+						<li><a href="/search/states/wa">Washington</a></li>
+						<li><a href="/search/states/wv">West Virginia</a></li>
+						<li><a href="/search/states/wi">Wisconsin</a></li>
+						<li><a href="/search/states/wy">Wyoming</a></li>
+					</ul>				
+					
+					<li>
+						<a href="https://ngl.cengage.com/assets/html/catalogs/" >
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span class="menuLinksText">Catalogs</span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="javascript:void(0);" class="subMenuparent collapsed" data-toggle="collapse" data-target="#hamburgerSubmenu3">
+							<i class="fa fa-caret-up menuLinksIcon" aria-hidden="true"></i>
+							<span class="menuLinksText">What's New</span>
+						</a>
+					</li>
+					<ul class="collapse navbar-collapse nav navbar-nav headerLeftMenuSubmenu" id="hamburgerSubmenu3">
+						<li><a href="http://ngl.cengage.com/assets/html/mindtap/">MindTap</a></li>
+						<li><a href="http://ngl.cengage.com/bookfinder">Leveled Book Finder</a></li>
+						<li><a href="http://ngl.cengage.com/assets/html/explorers/">National Geographic Explorers</a></li>
+						<li><a href="http://ngl.cengage.com/assets/html/testimonials/">Testimonials</a></li>
+						<li><a href="http://ngl.cengage.com/assets/html/ccss/">Common Core</a></li>
+						<li><a href="http://ngl.cengage.com/assets/html/stem/">STEM</a></li>
+						<li><a href="http://ngl.cengage.com/assets/html/ngss/">NGSS</a></li>
+						<li><a href="http://ngl.cengage.com/assets/html/essa/">ESSA</a></li>
+					</ul>
+				</ul>
+				</div>
+			</div>
+	</div>
+</div>

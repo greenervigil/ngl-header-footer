@@ -1,0 +1,197 @@
+<!--SCHOOL FOOTER-->
+<script type="text/javascript">
+	var ImgPath = protocol + "//" + env + "cdn.cengage.com/static/sites/ngl/header-footer/"+version+"/images/";
+	$(document).ready(function() {    
+      footerImg('.facebookLogo','Facebook.png');
+      footerImg('.twitterLogo','Twitter.png');
+      footerImg('.instagramLogo','Instagram.png');
+      footerImg('.facebookLogo','Facebook.png');
+      footerImg('.youtubeLogo','YouTube.png');
+      footerImg('.mailLogo','email.png');
+      footerImg('.callLogo','call.png');
+      footerImg('.findLogo','find.png');
+      $(window).resize(footerImg);
+  	});
+
+	function footerImg(imgId, imgName){
+      var footerImage = ImgPath+imgName;
+      $(imgId).css('background-image','url(' +footerImage+ ')');
+  }
+</script>
+<div class="footerOpenContainer">
+	<div class="mainPageContainer">
+		<div class="footerContainer">
+			<!-- <div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<p id="footerHeaderText">
+						NGL.Cengage.com/school
+					</p>
+				</div>
+			</div> -->
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<!-- <p id="footerHeaderText"> -->
+								<a href="//ngl.cengage.com" id="footerHeaderText">NGL.Cengage.com</a>
+							<!-- </p> -->
+						</div>
+						<div class="col-xs-6 col-sm-5 col-md-6 col-lg-6">
+							<div class="footerRightContainer">
+								<div class="footersubHeader">
+									CONTACT SALES:
+								</div>
+								<div class="schoolSocialMediaLogoContainer">
+									<div class="socialMediaLogo">
+										<a href="https://www.cengage.com/repfinder/natgeo/?ngl=true/" class="mailLogo"></a>
+									</div>
+									<div class="socialMediaLogo">
+										<a href="https://www.cengage.com/repfinder/natgeo/?ngl=true/" class="callLogo"></a>
+									</div>
+									<div class="socialMediaLogo">
+										<a href="https://www.cengage.com/repfinder/natgeo/?ngl=true/" class="findLogo"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-7 col-md-6 col-lg-6">
+							<div class="footerLeftContainer">
+								<div class="footersubHeader">
+									CONNECT:
+								</div>
+								<div class="schoolSocialMediaLogoContainer">
+									<div class="socialMediaLogo">
+										<a href="http://www.facebook.com/NatGeoLearning" class="facebookLogo"></a>
+									</div>
+									<div class="socialMediaLogo">
+										<a href="https://twitter.com/ExploreInside" class="twitterLogo"></a>
+									</div>
+									<div class="socialMediaLogo">
+										<a href="https://instagram.com/natgeolearning" class="instagramLogo"></a>
+									</div>
+									<div class="socialMediaLogo">
+										<a href="http://www.youtube.com/natgeolearning" class="youtubeLogo"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<p id="schoolFooterMiddleHeaderText">
+									Visit <a href="http://www.nationalgeographic.com/"><strong>NationalGeographic.com</strong></a> and <a href="http://www.cengage.com/"><strong>Cengage.com</strong></a>
+								</p>
+							</div>
+						</div>					
+					
+						<div id="footerCollapseMainContainer">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<div class="footercolumnContainer schoolFootercolumnContainer">
+										<ul class="nav">
+											<li><a href="http://ngl.cengage.com/pov">About</a></li>
+											<li><a href="http://www.cengage.com/careers/">Careers</a></li>
+											<li><a href="http://www.cengage.com/investor/">Investors</a></li>
+											<li><a href="http://ngl.cengage.com/blog">News</a></li>
+											<li><a href="http://www.cengage.com/terms">Terms of Use</a></li>
+											<li><a href="http://www.cengage.com/privacy">Privacy</a></li>
+											<li><a href="http://ngl.cengage.com/sitemap/">Site Map</a></li>
+											<li><a href="http://www.cengage.com/accessibility/">Accessibility</a></li>
+											<li><a href="http://www.cengage.com/permissions">Permissions</a></li>
+											<li><a href="https://nglstore.cengage.com">NGL Store</a></li>
+											<li><a href="http://www.cengage.com/us/piracy_report.html">Piracy</a></li>
+											<li id="countryColumn"><p class="countryUSText"></p></li>
+										</ul>
+									</div>
+									 <!-- 
+									 <div class="footercolumnContainer">
+										<ul class="nav">
+											<li><a href="#">About</a></li>
+											<li><a href="#">Site Map</a></li>
+										</ul>
+									</div>
+									<div class="footercolumnContainer">
+										<ul class="nav">
+											<li><a href="http://www.cengage.com/careers/">Careers</a></li>
+											<li><a href="http://www.cengage.com/accessibility/">Accessibility</a></li>
+										</ul>
+									</div>
+									<div class="footercolumnContainer">
+										<ul class="nav">
+											<li><a href="http://www.cengage.com/investor/">Investors</a></li>
+											<li><a href="http://www.cengage.com/permissions">Permissions</a></li>
+										</ul>
+									</div>
+									<div class="footercolumnContainer">
+										<ul class="nav">
+											<li><a href="http://news.cengage.com/">News</a></li>
+											<li><a href="http://news.cengage.com/">NGL Store</a></li>
+										</ul>
+									</div>
+									<div class="footercolumnContainer">
+										<ul class="nav">
+											<li><a href="http://www.cengage.com/terms">Terms of Use</a></li>
+											<li><a href="http://www.cengage.com/us/piracy_report.html">Piracy</a></li>
+										</ul>
+									</div>
+									<div class="footercolumnContainer">
+										<ul class="nav">
+											<li><a href="http://www.cengage.com/privacy">Privacy</a></li>
+											<li><p class="countryUSText">Country:&nbsp;US</p></li>
+										</ul>
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div id="footerCollapseMainContainer" class="collapse navbar-collapse nav navbar-nav" >
+	<div class="mainPageContainer footerPadding">
+		<div class="footerContainer">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="footercolumnContainer">
+						<ul class="nav">
+							<li><p class="countryUSText">Country:&nbsp;US</p></li>
+							<li><a href="http://www.cengage.com/accessibility/">Accessibility</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="http://www.cengage.com/investor/">Investors</a></li>
+							<li><a href="http://news.cengage.com/">News</a></li>
+						</ul>
+					</div>
+					<div class="footercolumnContainer">
+						<ul class="nav">
+							<li><a href="http://www.cengage.com/careers/">Careers</a></li>
+							<li><a href="http://cengagesites.com/academic/?site=4744">HEOA</a></li>
+							<li><a href="http://www.cengage.com/dmca/index.html">DMCA</a></li>
+							<li><a href="http://www.cengage.com/us/piracy_report.html">Piracy</a></li>
+							<li><a href="http://www.cengage.com/copyright">Copyright</a></li>
+						</ul>
+					</div>
+					<div class="footercolumnContainer">
+						<ul class="nav">
+							<li><a href="http://www.cengage.com/permissions">Permissions</a></li>
+							<li><a href="http://www.cengage.com/terms">Terms</a></li>
+							<li><a href="http://www.cengage.com/privacy">Privacy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- <script type="text/javascript">
+	$(function() {
+
+		$("#footerCollapseMainContainer.collapse").on('shown.bs.collapse', function () {
+		    var $target = $('html,body'); 
+			$target.animate({scrollTop: $target.height()}, 1000);
+		})
+	});
+</script> 

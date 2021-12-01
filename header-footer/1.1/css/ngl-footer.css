@@ -1,0 +1,328 @@
+#footer_include {
+    /*margin-top: 3px;*/
+   /* width: 100%;*/
+    /*position: relative;*/
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    /*height: 0px;*/
+    z-index: 0;
+}
+
+.footerContainer{
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footerOpenContainer{
+	background-color: rgb(5, 55, 77);
+	padding: 10px 0px 20px;
+}
+
+#footerHeaderText{
+	font-size: 24px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.167;
+    margin: 10px 0px 23px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#schoolFooterMiddleHeaderText{
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	line-height: 27px;
+	margin: 10px 0px 13px;
+}
+
+#schoolFooterMiddleHeaderText a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.footerLeftContainer{
+	color: rgb(255, 255, 255);
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.footerRightContainer{
+	color: rgb(255, 255, 255);
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.footersubHeader{
+	width: 100%;
+	font-size: 30px;
+	font-family: "summerFontBold";
+	color: rgb(255, 255, 255);
+	line-height: 0.933;
+}
+
+.footerLeftContainer .footersubHeader{
+	text-align: left;
+}
+
+.footerRightContainer .footersubHeader{
+	text-align: left;
+}
+
+/*------------ Social icons ----------------*/
+
+.schoolSocialMediaLogoContainer {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.socialMediaLogo a{
+	width: 30px;
+	height: 30px;
+    position: relative;
+}
+
+.footerLeftContainer  .socialMediaLogo a{
+	float: left;
+	margin-right: 4%;
+}
+
+.footerRightContainer .schoolSocialMediaLogoContainer .socialMediaLogo a{
+	float: left;
+	margin-right: 1%;
+}
+
+.facebookLogo{
+    background: url(../images/Facebook.png) left center no-repeat;
+}
+
+.twitterLogo{
+    background: url(../images/Twitter.png) left center no-repeat;
+}
+
+.instagramLogo{
+    background: url(../images/Instagram.png) left center no-repeat;
+}
+
+.youtubeLogo{
+    background: url(../images/YouTube.png) left center no-repeat;
+}
+
+.findLogo{
+    background: url(../images/find.png) left center no-repeat;
+}
+
+.callLogo{
+    background: url(../images/call.png) left center no-repeat;
+}
+
+.mailLogo{
+    background: url(../images/email.png) left center no-repeat;
+}
+
+
+/*-------------- Footer menu toggle --------------------*/
+
+.footerMenuButtonContainer{
+	position: relative;
+	float: right;
+}
+
+#footerCollapseMainContainer{
+	/*background-color: rgb(5, 55, 77);*/
+	margin: 0px;
+	margin-top: 2px;
+	/*background-image: url(../images/footeryellowDesktop.png);*/
+	/*background-repeat: no-repeat;
+	background-position: bottom;*/
+}
+
+#footerCollapseMainContainer.navbar-collapse{
+	padding:0px;
+}
+
+#footerCollapseMainContainer .footerPadding{
+	padding: 40px 0px;
+}
+
+ .footerMenuButtonContainer button{
+    margin-right: 0px;
+    padding: 0px 0px;
+}
+
+.footerMenuButtonContainer button span.icon-bar{
+	background-color: #fff;
+	width: 30px;
+    border-radius: 3px;
+    height: 6px;
+}
+
+#footer_include .navbar {
+    position: relative;
+    float: right;
+    margin-bottom: 0px;
+}
+
+
+#footer_include .navbar-header {
+    position: relative;
+    float: right;
+}
+#footer_include .navbar-toggle {
+    display: block;
+}
+#footer_include .navbar-collapse.collapse {
+    display: none!important;
+}
+#footer_include .navbar-collapse.collapse.in {
+    display: block!important;
+}
+#footer_include .navbar-nav {
+    float: none!important;
+}
+#footer_include .navbar-nav>li {
+    float: none;
+}
+
+#footer_include .nav>li>a:hover, #footer_include .nav>li>a:focus{
+	background-color: transparent;
+}
+
+.footercolumnContainer{
+	/*width: 100px;*/
+	width: 100%;
+	position: relative;
+	float: left;
+	margin-right: 2%;
+}
+
+.footercolumnContainer{
+	color: #ffffff;
+}
+
+.schoolFootercolumnContainer .countryUSText{
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+  	font-weight: normal;
+	margin:10px 10px 15px 0px;
+	line-height: 1.429;
+}
+
+.schoolFootercolumnContainer.footercolumnContainer li {
+    /*border: 1px solid red;*/
+    width: 103px;
+    position: relative;
+    float: left;
+}
+
+.footercolumnContainer ul li a{
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+  	line-height: 1.429;
+	padding-left: 0px;
+	padding-right: 0px;
+	font-weight: normal;
+
+}
+
+
+/*- Elt Footer-*/
+/*#footer_include.elt{
+    margin-top: 3px;
+    width: 100%;
+    position: relative;
+    float: left;
+}*/
+
+#EltfooterHeaderText{
+	font-size: 24px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.167;
+	margin: 0px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#EltfooterHeaderText:hover{
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+
+#footerMiddleHeaderText{
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	line-height: 27px;
+	margin: 0px;
+}
+
+#footerMiddleHeaderText a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.EltfooterOpenContainer{
+	background-color: rgb(0, 0, 0);
+	padding: 10px 0px;
+}
+
+.EltfooterRightText{
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.556;
+	text-align: right;
+}
+
+.EltfooterContactLink{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+   	display: block;
+}
+
+.EltfooterContactLink:hover{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.socialMediaLogoContainer {
+    position: relative;
+    width: 100%;
+    float: right;
+    margin-top: 10px;
+}
+
+.footerRightContainer .socialMediaLogo a{
+	float: right;
+	margin-left: 4%;
+}
+
+.EltfooterOpenContainer .footercolumnContainer{
+	margin-right: 10px;
+    width: 135px;
+}
+
+.EltfooterOpenContainer .countryUSText{
+	font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin: 10px 15px;
+    margin-left: 0px;
+    line-height: 1.429;
+    font-weight: normal;
+}
+
+.EltfooterOpenContainer .footercolumnContainer ul li a {
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	padding-left: 0px;
+	line-height: 1.429;
+    font-weight: normal;
+}

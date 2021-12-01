@@ -1,0 +1,124 @@
+@media (max-width: 767px) {
+	.footerContainer {
+		padding: 0px 12px;
+	}
+
+	.footerOpenContainer{
+		padding: 0px;
+	}
+
+	.footercolumnContainer{
+		margin-right: 3%;
+	    width: 100%;
+	}
+
+
+	#footerHeaderText{
+	    margin: 10px 0px 10px;
+	}
+
+	#schoolFooterMiddleHeaderText{
+		margin: 10px 0px 10px;
+	}
+
+	.schoolFootercolumnContainer.footercolumnContainer li{
+		width: 117px;
+	}
+
+
+	/*#footerCollapseMainContainer .footerPadding{
+		padding: 30px 0px;
+	}*/
+
+	/*-- Elt Footer--*/
+
+	.EltfooterOpenContainer {
+	    padding: 20px 0px;
+	}
+
+	#EltfooterHeaderText{
+		font-size: 18px;
+		-moz-transform: matrix( 1.00677490234375,0,0,1,0,0);
+		-webkit-transform: matrix( 1.00677490234375,0,0,1,0,0);
+		-ms-transform: matrix( 1.00677490234375,0,0,1,0,0);
+	}
+
+	#footerMiddleHeaderText{
+		font-size: 14px;
+		line-height: 27px;
+		text-align: left;
+	    margin: 8px 0px;
+	}
+
+	.EltfooterRightText{
+		font-size: 16px;
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		line-height: 1.556;
+		text-align: right;
+	}
+
+	.EltfooterOpenContainer .countryUSText{
+		font-size: 12px;
+		margin:0px;
+		padding: 10px 0px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer ul li a {
+		font-size: 12px;
+		padding: 10px 0px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer{
+		margin-right: 0px;
+		width: 108px;
+	}
+}
+
+@media (max-width: 375px) {
+
+	.schoolFootercolumnContainer.footercolumnContainer li{
+		width: 117px;
+	}
+
+	/*-------------- Footer menu toggle --------------------*/
+	#footerCollapseMainContainer{
+		/*background-image: url(../images/footeryellowMobile.png);*/
+	}
+}
+@media (max-width: 325px) {
+	#footerHeaderText{
+		font-weight: 600;
+	}
+
+	.schoolFootercolumnContainer.footercolumnContainer li{
+		width: 98px;
+	}
+
+	.footercolumnContainer{
+		margin-right: 2%;
+		width: 100%;
+	}
+
+	/*-- Elt Footer--*/
+	.EltfooterOpenContainer {
+	    padding: 10px 0px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer{
+		width: 98px;
+	}
+
+	#footerMiddleHeaderText{
+	    margin: 3px 0px;
+	}
+
+	#EltfooterHeaderText{
+		font-size: 16px;
+	}
+
+	.EltfooterRightText{
+		font-size: 14px;
+	}
+
+}

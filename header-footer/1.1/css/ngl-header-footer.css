@@ -1,0 +1,1047 @@
+/*-- Header desktop --*/
+body{
+	background-color: #FFF;
+	height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    /*position: relative;*/
+    float: left;
+    font: 400 12px/1 'Open Sans', Arial, Helvetica, sans-serif;
+    padding-bottom: 170px;
+    margin-top: 71px;
+}
+
+/*.eltBody{
+    padding-bottom: 166px;
+}*/
+
+/*.schoolBody{
+    padding-bottom: 185px;
+}*/
+
+html{
+    min-height: 100%;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.endeca-slot {
+    display: block;
+    position: inherit;
+}
+
+#pageContainer, #NGLRedesignpageContainer{
+    display: initial;
+    /*margin-bottom: 3px;*/
+    /*margin-top: 71px;*/
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.row{
+    margin:0px;
+    width: 100% !important;
+    height: 100%;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4,
+ .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, 
+ .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10,
+  .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+    padding:0px;
+}
+
+#header_include{
+    height :70px;
+    border-bottom: 2px solid rgb(156, 156, 156);
+    margin-bottom: 1px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background-color: #ffffff;
+    min-height: 70px;
+    z-index: 99;
+}
+
+.mainPageContainer{
+    max-width: 1056px;
+    margin: 0 auto;
+}
+.container {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#header_include .title a {
+    background: url(../images/NGL-Cengage-elt-Logo-desktop.png) left center no-repeat;
+    font-size: 0;
+    height: 52px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    background-size: contain;
+}
+
+.market-title {
+    font-size: 20px;
+    color: rgb(51, 51, 51);
+    font-weight: 800;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.largeTitle{
+	display: block;
+}
+
+.smallTitle{
+	display: none;
+}
+
+
+/*-- Nav bar --*/
+
+#headerLeftMenu button{
+    width: 38px;
+    padding: 0px;
+    border: none;
+    min-height: 46px;
+}
+
+#headerLeftMenu button:focus{
+    outline: none;
+}
+
+#headerLeftMenu button.btnMenuImg{
+    background: url(../images/btn_menu.jpg) center no-repeat;
+     background-size: contain;
+}
+
+#headerLeftMenu button.btnSearchImg{
+    background: url(../images/btn_search.jpg) center no-repeat;
+     background-size: contain;
+}
+
+#header_include .navbar{
+    margin: 0px;
+    margin-top: 9px;
+}
+
+#header_include .navbar-header {
+    float: none;
+}
+#header_include .navbar-toggle {
+    display: block;
+}
+#header_include .navbar-collapse.collapse {
+    display: none!important;
+}
+#header_include .navbar-collapse.collapse.in {
+    display: block!important;
+}
+#header_include .navbar-nav {
+    float: none!important;
+}
+#header_include .navbar-nav>li {
+    float: none;
+    z-index: 1;
+    margin-top: 2px;
+}
+
+#header_include .headerLeftMenuSubmenu.navbar-collapse{
+    max-height: none;
+}
+
+/*------------ Header Menu  ----------------------- */
+#headerLeftMenuLinks>li {
+	border-width: 1px;
+	border-color: rgb(255, 255, 255);
+	border-style: solid;
+	border-radius: 3px;
+	background-color: rgb(102, 102, 102);
+	height: 42px;
+    cursor: pointer;
+}
+
+#headerLeftMenuLinks{
+    /*height: 270px !important;*/
+    max-height: 440px;
+    overflow-y: auto!important;
+}
+
+/*#headerLeftMenuLinks ul{
+    overflow-y: scroll !important;
+    height: 250px !important;
+}*/
+
+#headerLeftMenuLinks>li a {
+	font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 1.4;
+    text-align: left;
+    padding: 8px;
+    vertical-align: middle;
+    display: flex;
+    cursor: pointer;
+}
+
+#headerLeftMenuLinks>li:first-child{
+    background-color: #941600;
+}
+
+#headerLeftMenuLinks>li:hover,#headerLeftMenuLinks>li:focus,#headerLeftMenuLinks>li>a:hover, #headerLeftMenuLinks>li>a:focus{
+    background-color: rgb(102, 102, 102);
+}
+
+#headerLeftMenuLinks>li:first-child:hover, #headerLeftMenuLinks>li:first-child a:hover,
+#headerLeftMenuLinks>li:first-child a:focus, #headerLeftMenuLinks>li:first-child:focus{
+    background-color: #941600;
+}
+
+ul#headerLeftMenuLinks{
+	padding: 0px;
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    margin-top: 12px;
+    z-index: 9;
+}
+
+#headerLeftMenu .navbar-header{
+    float: right;
+}
+
+#headerLeftMenu .navbar-header>span#menuText{
+	font-weight: 900;
+    font-size: 9px;
+    line-height: 2px;
+    display: inherit;
+}
+
+#headerMenuContainer span#menuText{
+	text-align: center;
+}
+
+.fa.menuLinksIcon{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: rgb(102, 102, 102);
+    background-color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-style: normal;
+    cursor: pointer;
+    line-height: 19px;
+}
+
+.menuLinksText{
+    margin-left: 6px;
+}
+
+.visibilityHidden{
+    visibility: hidden;
+}
+
+
+.subMenuparent.collapsed > i{
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+ul.headerLeftMenuSubmenu{
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.headerLeftMenuSubmenu>li{
+    border: 1px solid rgb(148, 151, 153);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 1px;
+    height: 42px;
+}
+
+ul.headerLeftMenuSubmenu>li>a{
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+    padding: 10px 15px;
+}
+
+ul.headerLeftMenuSubmenu>li>a:hover, ul.headerLeftMenuSubmenu>li>a:focus{
+    background-color: transparent;
+}
+
+/* ------------ Search container --------------------- */
+
+#headerSearchContainer{
+   margin-right: 5%;
+}
+
+ul#headerLeftSearchLinks{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    width: 100%;
+    margin-top: 12px;
+    z-index: 9;
+    /*height: 440px !important;*/
+    max-height: 440px;
+    overflow-y: auto!important;
+}
+
+#header-search{
+	border: 1px solid rgb(0, 114, 163);
+	border-radius: 3px;
+	background-color: rgb(255, 255, 255);
+	height: 42px;
+	width: 100%;
+    padding-left: 38px;
+    font-size: 12px;
+	color: rgb(0, 0, 0);
+	line-height: 1.2;
+	text-align: left;
+}
+
+button#header-submit {
+    position: absolute;
+    border: none;
+    height: 42px;
+    top: 0;
+    background: transparent;
+    color: #0071a2;
+    width: 38px;
+    font-size: 28px;
+    padding: 1px 6px;
+}
+
+#headerLeftSearchLinks>li:not(:first-child){
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 3px;
+	background-color: rgb(0, 114, 163);
+	height: 42px;
+}
+
+#headerLeftSearchLinks>li>a{
+	font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    text-align: left;
+    padding: 8px;
+     padding-left: 38px;
+    height: 100%;
+}
+
+ul#headerLeftSearchLinks>li>a:hover, ul#headerLeftSearchLinks>li>a:focus{
+    background-color: transparent;
+}
+
+
+/*----------------- School Header --------------*/
+#header_include.school .title a {
+    background: url(../images/NGL-Cengage-school-Logo-desktop.png) left center no-repeat;
+    font-size: 0;
+    height: 58px;
+    left: 0;
+    position: absolute;
+    top: 6px;
+    width: 100%;
+}
+/*-- Header tablet --*/
+@media (max-width: 991px) {
+	body{
+	   padding-bottom: 168px;
+	}
+
+	#header_include .title a {
+		/*background: url(../images/NGL-Cengage-Logo-tablet.png) left center no-repeat;*/
+	}
+
+	.container {
+		padding: 0px 15px;
+	}
+
+	/*-- Nav bar --*/
+
+	#headerLeftMenu button.btnMenuImg{
+	   /* background: url(../images/btn_menu_tablet.png) center no-repeat;*/
+	}
+
+	#headerLeftMenu button.btnSearchImg{
+	    /*background: url(../images/btn_search_tablet.png) center no-repeat;*/
+	}
+
+
+		/*----------------- School Header --------------*/
+	#header_include.school .title a {
+	    background: url(../images/NGL-Cengage-school-Logo-tablet.png) left center no-repeat;
+	}
+
+
+}
+/*-- Header mobile --*/
+@media (max-width: 767px) {
+	body{
+		padding-bottom: 300px;
+	}
+	#header_include .title a{
+		background: url(../images/NGL-Cengage-elt-Logo-mobile.png) left center no-repeat;
+	}
+
+	.container {
+		padding: 0px 12px;
+	}
+
+	.largeTitle{
+		display: none;
+	}
+	.smallTitle{
+		display: block;
+	}
+
+	#headerLeftMenuLinks{
+		height: 400px !important;
+	}
+
+	#headerLeftMenu button.btnMenuImg{
+	    /*background: url(../images/btn_menu_mobile.png) center no-repeat;*/
+	}
+
+	#headerLeftMenu button.btnSearchImg{
+	    /*background: url(../images/btn_search_mobile.png) center no-repeat;*/
+	}
+
+	#headerLeftMenu button{
+	    width: 36px;
+	    padding: 0px;
+	    border: none;
+	    min-height: 49px;
+	}
+
+	/*----------------- School Header --------------*/
+	#header_include.school .title a {
+	    background: url(../images/NGL-Cengage-school-Logo-mobile.png) left center no-repeat;
+	}
+
+	.market-title {
+		font-size: 18px;
+		-moz-transform: matrix( 1.146875,0,0,1.13953488372093,0,0);
+		-webkit-transform: matrix( 1.146875,0,0,1.13953488372093,0,0);
+		-ms-transform: matrix( 1.146875,0,0,1.13953488372093,0,0);
+	}
+
+	.logoMobWidth {
+	    width: 55%;
+	}
+
+	.marketTitleMobWidth {
+	    width: 17%;
+	}
+}
+
+@media (max-width: 375px) {
+
+	#header_include .title a {
+	    /*background-size: 100%;*/
+	}
+
+	/*----------------- School Header --------------*/
+
+	/*#header_include.school .title a {
+	    background-size: 100%;
+	}*/
+
+	#header_include.school .navbar{
+		float: right;
+		width: 100%;	
+	}
+
+	#header_include.school .logoMobWidth {
+	    width: 63%;
+	}
+
+	#header_include.school #headerLeftMenu {
+	    width: 25%;
+	}
+
+	.marketTitleMobWidth {
+	    width: 12%;
+	}
+
+}
+
+@media (min-width: 326px) and (max-width: 374px) {
+	body{
+		padding-bottom: 327px;
+	}
+}
+
+@media (max-width: 325px) {
+	body{
+		padding-bottom: 327px;
+	}
+}
+
+@media (max-width: 340px) {
+	/*----------------- School Header --------------*/
+	#header_include.school .logoMobWidth {
+	    width: 60%;
+	}
+
+	.marketTitleMobWidth {
+	    width: 13%;
+	}
+
+	#header_include.school .title a {
+	    background-size: 100%;
+	}
+
+	#header_include.school #headerLeftMenu {
+	    width: 27%;
+	}
+}
+/*-- Footer desktop --*/
+#footer_include {
+    /*margin-top: 3px;*/
+   /* width: 100%;*/
+    /*position: relative;*/
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    /*height: 0px;*/
+    z-index: 0;
+}
+
+.footerContainer{
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footerOpenContainer{
+	background-color: rgb(5, 55, 77);
+	padding: 10px 0px 20px;
+}
+
+#footerHeaderText{
+	font-size: 24px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.167;
+    margin: 10px 0px 23px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#schoolFooterMiddleHeaderText{
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	line-height: 27px;
+	margin: 10px 0px 13px;
+}
+
+#schoolFooterMiddleHeaderText a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.footerLeftContainer{
+	color: rgb(255, 255, 255);
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.footerRightContainer{
+	color: rgb(255, 255, 255);
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.footersubHeader{
+	width: 100%;
+	font-size: 30px;
+	font-family: "summerFontBold";
+	color: rgb(255, 255, 255);
+	line-height: 0.933;
+}
+
+.footerLeftContainer .footersubHeader{
+	text-align: left;
+}
+
+.footerRightContainer .footersubHeader{
+	text-align: left;
+}
+
+/*------------ Social icons ----------------*/
+
+.schoolSocialMediaLogoContainer {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.socialMediaLogo a{
+	width: 30px;
+	height: 30px;
+    position: relative;
+}
+
+.footerLeftContainer  .socialMediaLogo a{
+	float: left;
+	margin-right: 4%;
+}
+
+.footerRightContainer .schoolSocialMediaLogoContainer .socialMediaLogo a{
+	float: left;
+	margin-right: 1%;
+}
+
+.facebookLogo{
+    background: url(../images/Facebook.png) left center no-repeat;
+}
+
+.twitterLogo{
+    background: url(../images/Twitter.png) left center no-repeat;
+}
+
+.instagramLogo{
+    background: url(../images/Instagram.png) left center no-repeat;
+}
+
+.youtubeLogo{
+    background: url(../images/YouTube.png) left center no-repeat;
+}
+
+.findLogo{
+    background: url(../images/find.png) left center no-repeat;
+}
+
+.callLogo{
+    background: url(../images/call.png) left center no-repeat;
+}
+
+.mailLogo{
+    background: url(../images/email.png) left center no-repeat;
+}
+
+
+/*-------------- Footer menu toggle --------------------*/
+
+.footerMenuButtonContainer{
+	position: relative;
+	float: right;
+}
+
+#footerCollapseMainContainer{
+	/*background-color: rgb(5, 55, 77);*/
+	margin: 0px;
+	margin-top: 2px;
+	/*background-image: url(../images/footeryellowDesktop.png);*/
+	/*background-repeat: no-repeat;
+	background-position: bottom;*/
+}
+
+#footerCollapseMainContainer.navbar-collapse{
+	padding:0px;
+}
+
+#footerCollapseMainContainer .footerPadding{
+	padding: 40px 0px;
+}
+
+ .footerMenuButtonContainer button{
+    margin-right: 0px;
+    padding: 0px 0px;
+}
+
+.footerMenuButtonContainer button span.icon-bar{
+	background-color: #fff;
+	width: 30px;
+    border-radius: 3px;
+    height: 6px;
+}
+
+#footer_include .navbar {
+    position: relative;
+    float: right;
+    margin-bottom: 0px;
+}
+
+
+#footer_include .navbar-header {
+    position: relative;
+    float: right;
+}
+#footer_include .navbar-toggle {
+    display: block;
+}
+#footer_include .navbar-collapse.collapse {
+    display: none!important;
+}
+#footer_include .navbar-collapse.collapse.in {
+    display: block!important;
+}
+#footer_include .navbar-nav {
+    float: none!important;
+}
+#footer_include .navbar-nav>li {
+    float: none;
+}
+
+#footer_include .nav>li>a:hover, #footer_include .nav>li>a:focus{
+	background-color: transparent;
+}
+
+.footercolumnContainer{
+	/*width: 100px;*/
+	width: 100%;
+	position: relative;
+	float: left;
+	margin-right: 2%;
+}
+
+.footercolumnContainer{
+	color: #ffffff;
+}
+
+.schoolFootercolumnContainer .countryUSText{
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+  	font-weight: normal;
+	margin:10px 10px 15px 0px;
+	line-height: 1.429;
+}
+
+.schoolFootercolumnContainer.footercolumnContainer li {
+    /*border: 1px solid red;*/
+    width: 103px;
+    position: relative;
+    float: left;
+}
+
+.footercolumnContainer ul li a{
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+  	line-height: 1.429;
+	padding-left: 0px;
+	padding-right: 0px;
+	font-weight: normal;
+
+}
+
+
+/*- Elt Footer-*/
+/*#footer_include.elt{
+    margin-top: 3px;
+    width: 100%;
+    position: relative;
+    float: left;
+}*/
+
+#EltfooterHeaderText{
+	font-size: 24px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.167;
+	margin: 0px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#EltfooterHeaderText:hover{
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+
+#footerMiddleHeaderText{
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	line-height: 27px;
+	margin: 0px;
+}
+
+#footerMiddleHeaderText a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.EltfooterOpenContainer{
+	background-color: rgb(0, 0, 0);
+	padding: 10px 0px;
+}
+
+.EltfooterRightText{
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.556;
+	text-align: right;
+}
+
+.EltfooterContactLink{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+   	display: block;
+}
+
+.EltfooterContactLink:hover{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.socialMediaLogoContainer {
+    position: relative;
+    width: 100%;
+    float: right;
+    margin-top: 10px;
+}
+
+.footerRightContainer .socialMediaLogo a{
+	float: right;
+	margin-left: 4%;
+}
+
+.EltfooterOpenContainer .footercolumnContainer{
+	margin-right: 10px;
+    width: 135px;
+}
+
+.EltfooterOpenContainer .countryUSText{
+	font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin: 10px 15px;
+    margin-left: 0px;
+    line-height: 1.429;
+    font-weight: normal;
+}
+
+.EltfooterOpenContainer .footercolumnContainer ul li a {
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	padding-left: 0px;
+	line-height: 1.429;
+    font-weight: normal;
+}
+/*-- Footer tablet --*/
+@media (max-width: 991px) {
+	.footerContainer {
+		padding: 0px 43px;
+	}
+
+	.footerOpenContainer {
+	    padding: 10px 0px 5px;
+	}
+
+	#footerHeaderText{
+		font-size: 20px;
+		line-height: 1.4;
+		-moz-transform: matrix( 1.00677490234375,0,0,1,0,0);
+		-webkit-transform: matrix( 1.00677490234375,0,0,1,0,0);
+		-ms-transform: matrix( 1.00677490234375,0,0,1,0,0);
+	    margin: 10px 0px 10px;
+	}
+
+	.footersubHeader{
+		font-size: 25px;
+		line-height: 1.4;
+		text-align: left;
+	}
+
+	#schoolFooterMiddleHeaderText{
+		font-size: 14px;
+	    margin: 10px 0px 13px;
+	}
+
+	.schoolFootercolumnContainer.footercolumnContainer li{
+		width: 98px;
+	}
+	
+	.schoolFootercolumnContainer.footercolumnContainer li a{
+		padding-top: 0px;
+	}
+
+	.schoolFootercolumnContainer .countryUSText {
+	    margin: 0px 10px 15px 0px;
+	}
+
+	/*-------------- Footer menu toggle --------------------*/
+	#footerCollapseMainContainer{
+		/*background-image: url(../images/footeryellowTablet.png);*/
+	}
+
+
+	/*-- Elt Footer--*/
+	#EltfooterHeaderText{
+		font-size: 20px;
+	}
+
+	#footerMiddleHeaderText{
+		font-size: 12px;
+		line-height: 27px;
+	}
+
+	.EltfooterRightText{
+		font-size: 18px;
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		line-height: 1.556;
+		text-align: right;
+	}
+
+	.EltfooterOpenContainer .countryUSText{
+		font-size: 12px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer ul li a {
+		font-size: 12px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer{
+		margin-right: 10px;
+		width: initial;
+	}
+}
+/*-- Footer mobile --*/
+@media (max-width: 767px) {
+	.footerContainer {
+		padding: 0px 12px;
+	}
+
+	.footerOpenContainer{
+		padding: 0px;
+	}
+
+	.footercolumnContainer{
+		margin-right: 3%;
+	    width: 100%;
+	}
+
+
+	#footerHeaderText{
+	    margin: 10px 0px 10px;
+	}
+
+	#schoolFooterMiddleHeaderText{
+		margin: 10px 0px 10px;
+	}
+
+	.schoolFootercolumnContainer.footercolumnContainer li{
+		width: 117px;
+	}
+
+
+	/*#footerCollapseMainContainer .footerPadding{
+		padding: 30px 0px;
+	}*/
+
+	/*-- Elt Footer--*/
+
+	.EltfooterOpenContainer {
+	    padding: 20px 0px;
+	}
+
+	#EltfooterHeaderText{
+		font-size: 18px;
+		-moz-transform: matrix( 1.00677490234375,0,0,1,0,0);
+		-webkit-transform: matrix( 1.00677490234375,0,0,1,0,0);
+		-ms-transform: matrix( 1.00677490234375,0,0,1,0,0);
+	}
+
+	#footerMiddleHeaderText{
+		font-size: 14px;
+		line-height: 27px;
+		text-align: left;
+	    margin: 8px 0px;
+	}
+
+	.EltfooterRightText{
+		font-size: 16px;
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		line-height: 1.556;
+		text-align: right;
+	}
+
+	.EltfooterOpenContainer .countryUSText{
+		font-size: 12px;
+		margin:0px;
+		padding: 10px 0px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer ul li a {
+		font-size: 12px;
+		padding: 10px 0px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer{
+		margin-right: 0px;
+		width: 108px;
+	}
+}
+
+@media (max-width: 375px) {
+
+	.schoolFootercolumnContainer.footercolumnContainer li{
+		width: 117px;
+	}
+
+	/*-------------- Footer menu toggle --------------------*/
+	#footerCollapseMainContainer{
+		/*background-image: url(../images/footeryellowMobile.png);*/
+	}
+}
+@media (max-width: 325px) {
+	#footerHeaderText{
+		font-weight: 600;
+	}
+
+	.schoolFootercolumnContainer.footercolumnContainer li{
+		width: 98px;
+	}
+
+	.footercolumnContainer{
+		margin-right: 2%;
+		width: 100%;
+	}
+
+	/*-- Elt Footer--*/
+	.EltfooterOpenContainer {
+	    padding: 10px 0px;
+	}
+
+	.EltfooterOpenContainer .footercolumnContainer{
+		width: 98px;
+	}
+
+	#footerMiddleHeaderText{
+	    margin: 3px 0px;
+	}
+
+	#EltfooterHeaderText{
+		font-size: 16px;
+	}
+
+	.EltfooterRightText{
+		font-size: 14px;
+	}
+
+}

@@ -1,0 +1,124 @@
+<!-- LOCAL HEADER -->
+<script type="text/javascript">	
+	var ImgPath = protocol + "//" + env + "cdn.cengage.com/static/sites/ngl/header-footer/"+version+"/images/";
+	
+	$(document).ready(function() {    
+    	checkSize('.eltBody #header_include .title a','NGL-Cengage-elt-Logo-desktop.png');    	
+    	$(window).resize(checkSize);
+	});
+
+	function checkSize(imgId, imgName){
+		var eltHeaderLogo = ImgPath+imgName
+		$(imgId).css('background-image','url(' +eltHeaderLogo+ ')');
+	}
+</script>
+<div class="mainPageContainer">
+	<div class="container-fluid">		
+		<div class="row">
+			
+				<div class="col-xs-4 col-sm-3 col-md-12 col-lg-12 headerDivider"></div>
+					
+			<div class="col-xs-4 col-sm-3 col-md-4 col-lg-4">
+				<div class="title">
+					<a href="//ngl.cengage.com/elt">National Geographic Learning</a>
+				</div>
+			</div>
+			<div class="col-xs-4 col-sm-6 col-md-4 col-lg-4 heading">
+				<div class="market-title largeTitle">English Language Teaching</div>
+				<div class="market-title smallTitle">ELT</div>
+			</div>	
+								
+			<div class="col-xs-4 col-sm-3 col-md-12 col-lg-12 alignCatalog">				
+			</div>			
+			<div class="col-xs-4 col-sm-3 col-md-1 col-lg-1" id="headerLeftMenu">
+				<nav class="navbar navbar-default">
+				  <div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+					<div class="navbar-menu pull-right">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#HamburgerMenu" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="toggle-text">MENU</span>
+						 </button>
+					</div>				
+				  </div>
+				</nav>
+			</div>
+			
+			<!-- Menu Dropdown -->
+			<div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-7 col-md-5 col-lg-offset-0 col-lg-11 HamburgerMenuContainer">
+				<div class="collapse navbar-collapse" id="HamburgerMenu">
+			      <ul class="nav navbar-nav mainMenuGA">
+			        <!-- <li><a class="menu_contact_sales_smallText" href="#">Contact <span class="sr-only">(current)</span></a></li> -->
+					<li>
+						<a href="#" class="catalog-collapse" data-toggle="collapse" data-target="#headerLeftSearchLinks" aria-controls="headerLeftSearchLinks" aria-expanded="false">
+				           <i class="fa fa-search" aria-hidden="true"></i>
+							<span id="catalogMenuText">Search Product</span>
+						</a>
+					</li>
+					<li >
+						<a href="#" class="catalog-collapse" data-toggle="collapse" data-target="#headerCatalogLinks" aria-controls="headerCatalogLinks" aria-expanded="false">
+							<span id="catalogMenuText">Browse the Catalog</span>
+						</a>
+					</li>
+					<li class="menu_contact_sales">
+						<a href="https://sites.cengage.com/RepFinder/search/natgeoesl?cid=repfinder&wb=repfinder_nglelt">
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span>Contact Sales Rep
+								<span class="mobile-only">Sales Representative</span>
+							</span>
+						</a>
+					</li>
+			        <li>
+						<a href="http://www.eltngl.com/support/">
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span>Technical Support </span>
+						</a>
+					</li>
+					<li>
+						<a href="http://ngl.cengage.com/contact/elt">
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span>Ordering </span>
+						</a>
+					</li>
+			        <li class="about">
+						<a href="http://ngl.cengage.com/about/elt)">
+							<i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i>
+							<span>About</span>
+						</a>
+					</li>
+			      </ul>            
+			    </div>
+		   	</div> 
+	   	</div>
+
+		<!-- Catalog Dropdown -->
+		<div class="row catalog">
+			<div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-7 col-md-5 col-lg-offset-0 col-lg-4 col-xl-4 headerLeftSearchLinksContainer">
+				<ul class="collapse mainSearchMenuGA" id="headerLeftSearchLinks">
+					
+				    <li>
+						<span class="closeSubnav">X</span>
+				        <form id="ngl-search" class="elt-ngl-search" name="CenSearch" target="_parent" method="post" _lpchecked="1">
+							<label>Search</label><br>
+							<input id="header-search" class="form-control" type="text" maxlength="60" autocomplete="off" size="50" placeholder="Search by title, author, ISBN, or keyword">
+							<button id="header-submit" type="submit">
+								Search
+							</button>
+							</div>
+						</form>
+				    </li>
+				</ul>
+				
+				<ul class="collapse mainSearchMenuGA" id="headerCatalogLinks">
+				   <span class="closeSubnav">X</span>
+				</ul>
+			</div>
+		</div>
+		
+		<!--End -->
+	</div>
+</div>

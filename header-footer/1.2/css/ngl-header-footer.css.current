@@ -250,7 +250,6 @@ ul#headerLeftMenuLinks{
 
 .menuLinksText{
     margin-left: 6px;
-	display: inline-block;
 }
 
 .visibilityHidden{
@@ -723,7 +722,7 @@ ul.nav.navbar-nav .dropdown.open .dropdown-toggle{
 
 	.eltBody #header_include {
 		height: auto;
-		border-bottom: 0px solid rgb(0, 0, 0);
+		border-bottom: 2px solid rgb(0, 0, 0);
 		margin-bottom: 1px;
 		position: fixed;
 		width: 100%;
@@ -1514,13 +1513,6 @@ ul.nav.navbar-nav .dropdown.open .dropdown-toggle{
 }
 
 
-.EltdesignCopyright {
-    color: rgb(255, 255, 255);
-    font-size: 11px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
 /*-- Footer tablet --*/
 @media (max-width: 991px) {
 	.footerContainer {
@@ -1758,9 +1750,6 @@ ul.nav.navbar-nav .dropdown.open .dropdown-toggle{
 } */
 
 /*DCSRUN-117 NGL ELT Header navigation*/
-.eltBody #header_include {
-	border-bottom: 0px solid #000;	
-}
 
 .eltBody #headerCatalogLinks>li {
     border: 1px solid #fff;
@@ -1786,9 +1775,9 @@ ul.nav.navbar-nav .dropdown.open .dropdown-toggle{
 
 .eltBody ul#headerCatalogLinks {
     padding: 0;
-    margin-left: 15px;
+    margin-left: 2px;
     position: absolute;
-	width: 1010px;
+	width: 75%;
     margin-top: 0px;
     z-index: 9;
     height: auto;
@@ -1796,8 +1785,7 @@ ul.nav.navbar-nav .dropdown.open .dropdown-toggle{
 	overflow-y: hidden;
     overflow-x: hidden;
 	background:#A19E9E;
-	padding: 25px 15px;
-	
+	padding: 15px;
 }
 
 .eltBody .fa.menuLinksIcon.visibilityHidden {
@@ -1806,19 +1794,15 @@ ul.nav.navbar-nav .dropdown.open .dropdown-toggle{
 }
 
 .eltBody #header_include .navbar-nav>li {
-	padding: 0px 0px 0px 0px;
-    width: 14.28%;
-    height: 48px;
-    display: inline-table;
+	padding: 0px 15px 0px 0px;
+    width: calc(100%/6);
 }
 
 .eltBody #HamburgerMenu .nav>li>a{
 	text-align:left;
 	padding-left: 0px;
-	padding: 4px 25px 4px 20px;
-	font-weight: normal;
-	display: table-cell;
-    vertical-align: middle;
+	padding: 7px 20px;
+
 }
 .eltBody #HamburgerMenu .nav>li>a.catalog-collapse {
 	background: #A19E9E;
@@ -1835,8 +1819,8 @@ ul.nav.navbar-nav .dropdown.open .dropdown-toggle{
 .eltBody #HamburgerMenu li i.fa.fa-search  {
 	display: inline-block;
     vertical-align: super;
-	position: relative;
-    top: -5px;
+	font-size: 25px;
+	
 }
 i.fa.fa-search + #catalogMenuText {
 	display: inline-block;
@@ -1844,7 +1828,7 @@ i.fa.fa-search + #catalogMenuText {
 }
 .eltBody .headerLeftSearchLinksContainer {
 	position: absolute;
-    width: 1010px;
+    width: 75%;
 }
 
 .eltBody button#header-submit {
@@ -1875,8 +1859,6 @@ i.fa.fa-search + #catalogMenuText {
     background: #A19E9E;
     height: auto!important;
     padding: 40px 20px;
-	margin-left: 15px;
-	width:100%;
 }
 
 .eltBody .HamburgerMenuContainer {
@@ -1892,10 +1874,9 @@ i.fa.fa-search + #catalogMenuText {
 }
 .eltBody .CatalogueListType {
     padding: 0px 15px;
+    border-left: 1px solid #000;
 }
-.resources.CatalogueListType {
-    border-right: 1px solid #000;
-}
+
 .eltBody .CatalogueListType h2,.eltBody .CatalogueListAge h2 {
     font-size: 14px;
     color: #000;
@@ -1924,28 +1905,19 @@ i.fa.fa-search + #catalogMenuText {
 	}
 
 .eltBody #HamburgerMenu .nav>li>a {
-	min-height: 48px;
+	min-height: 55px;
 }
 .eltBody #HamburgerMenu .nav>li>a:hover, .eltBody #HamburgerMenu .nav>li>a.catalog-collapse.collapsed:hover {
 	background: #A19E9E;
     color: #000;
 }
-.eltBody div#HamburgerMenu {
-    padding: 0px;
-    margin-left: 15px;
-}
 @media (max-width: 1199px) and (min-width: 1025px){
 	.eltBody .HamburgerMenuContainer {
-		margin-top: -3.7%;
-		margin-left:0;
+		margin-top: -3%;
 	}
 	.eltBody ul#headerCatalogLinks,.headerLeftSearchLinksContainer  {
-		margin-left: 15px;
+		margin-left: 114px;
 	}
-	.eltBody ul#headerCatalogLinks {
-		margin-left: 30px;
-	}
-
 }
 
 @media (max-width: 1024px){
@@ -1956,7 +1928,7 @@ i.fa.fa-search + #catalogMenuText {
 		margin-left: 0px;
 		margin-top: 72px;
 		position: fixed;
-		/*height: 90%;*/
+		height: 90%;
 		overflow: scroll;
 	}
 	.eltBody #header-search {
@@ -2030,7 +2002,7 @@ i.fa.fa-search + #catalogMenuText {
 	
 	.eltBody .HamburgerMenuContainer {
 		margin-left: -15px;
-		/*height:100%;*/
+		height:100%;
 		overflow:auto;
 	}
 
@@ -2074,195 +2046,7 @@ i.fa.fa-search + #catalogMenuText {
 	.eltBody ul#headerLeftSearchLinks {
 		padding:20px;
 	}
-	.eltBody div#HamburgerMenu {
-		padding: 15px;
-		margin-left: 0px;
-	}
-	.eltBody ul#headerLeftSearchLinks, .eltBody ul#headerCatalogLinks {
-		margin: 0 0 0 0px;
-	}
-	.eltBody #HamburgerMenu .nav>li>a {
-		padding:0px;
-	}
-	.eltBody div#HamburgerMenu {
-		padding: 15px;
-		    margin-left: 0px;
-	}
+	
 }
 
 /*DCSRUN-117 NGL ELT Header navigation*/
-
-/*DCSB2B-3028*/
-.newFooterDesign .fa-wechat:before, .newFooterDesign .fa-weixin:before {
-    content: "\f1d7";
-    color: black;
-    background: #fff;
-    border-radius: 5px;
-    padding: 3px 2px 0;
-    font-size: 0.75em;
-   
-}
-.newFooterDesign .EltfooterContactLink, .eltBody #headerCatalogLinks>li>a {
-    color: #000;
-    display: block;
-    text-decoration: none;
-    background: #fc0;
-    display: inline-block;
-    padding: 5px 15px;
-    font-size: 14px;
-}
-.newFooterDesign .EltfooterRightText {
-    font-size: 18px;
-    color: #fff;
-    font-weight: 700;
-    line-height: 1.556;
-    text-align: left;
-}
-.EltfooterOpenContainer .newFooterDesign #eltCountryColumn, .EltfooterOpenContainer .newFooterDesign .footercolumnContainer  {
-	clear:both;
-}
-.EltfooterOpenContainer .newFooterDesign #eltCountryColumn ul li a, .EltfooterOpenContainer .newFooterDesign #eltCountryColumn ul li p {
-    padding: 5px 0;
-}
-.newFooterDesign .socialMediaLogo span i {
-    margin: 3px;
-	color:#fff;
-}
-#footer_include .newFooterDesign .nav>li>a:focus, #footer_include .newFooterDesign .nav>li>a:hover, #footer_include .newFooterDesign .nav>li>a {
-	color:#fff;
-}
-.newFooterDesign .EltfooterRightText {
-	text-align: left;
-}
-.newFooterDesign a.EltfooterContactLink {
-    background-color: #fc0;
-    text-align: center;
-    display: inline-block;
-    padding: 10px 25px;
-    font-size: 12px;
-}
-.newFooterDesign .eltMiddleFooterContainer {
-	margin-top: 30px;
-}
-.newFooterDesign .socialMediaLogoContainer {		
-	position: relative; 		
-}
-.EltfooterOpenContainer .newFooterDesign .countryUSText {
-	margin: 5px 15px 5px 0;
-}
-
-.newFooterDesign .footerRightContainer .socialMediaLogo a {
-	float: none;
-    margin-left: 0px;
-}
-.eltBody #header_include .navbar-nav>li.desktopLink {
-		display:inline-table;
-	} 
-.eltBody #header_include .navbar-nav>li.mobileLink, .eltBody #header_include .navbar-search.mobileLink {
-		display:none;
-	}
-@media screen and (max-width:1024px) {
-	.eltBody #header_include .navbar-nav>li.desktopLink {
-		display:none;
-	} 
-	.eltBody #header_include .navbar-nav>li.mobileLink {
-		display:inline-table;
-	}
-	.eltBody #header_include .navbar-search.mobileLink {
-		display : block;
-	}
-	.eltBody #header_include .navbar-search.mobileLink .fa-search:before {
-		padding: 0px;
-		font-size: 27px;
-		font-weight: normal;
-	}
-	.eltBody .catalog-collapse i {
-		color:#fff;
-		padding :5px 0;
-	}
-}
-@media screen and (max-width:991px){ 
-	.EltfooterOpenContainer .newFooterDesign #eltCountryColumn, .EltfooterOpenContainer .newFooterDesign .footercolumnContainer {
-		clear:both;
-		width:50%;
-		padding-bottom: 20px;
-	}
-	#footer_include .newFooterDesign .nav>li>a:focus, #footer_include .newFooterDesign .nav>li>a:hover, #footer_include .newFooterDesign .nav>li>a {
-		padding-left:0;
-	}
-	.newFooterDesign .eltMiddleFooterContainer {
-		margin-top:  0px;
-	}
-	.resources.CatalogueListType {
-		border-right: 0px solid #000;
-	}
-}
-@media screen and (max-width:767px){
-	.newFooterDesign .socialMediaLogoContainer {
-		margin-top: 260px;
-		position: absolute; 
-		z-index: 1;
-	}
-	.newFooterDesign .socialMediaLogo span {
-		display: block;
-	}
-}
-
-
-/* Menu changes :  */
-.eltBody #header_include .navbar .navbar-search a {
-	padding-top: 5px;
-    display: inline-block;
-}
-.eltBody #HamburgerMenu .nav>li>a.catalog-collapse.collapsed.subMenuOpen {
-    background: #A19E9E;
-    color: #000;
-}
-.eltBody .navbar-default .navbar-toggle .icon-bar {
-	padding: 1px;
-    margin: 8px 0;
-}
-.eltBody .market-title {
-    padding-top: 20px;
-}
-.eltBody .market-title p {
-    font-size: 24px;
-    font-weight: 500;
-    color: #fff;
-    text-align: center;
-    margin: 0px;
-	line-height: 1.1;
-}
-.eltBody #HamburgerMenu .nav>li>a[data-target="#headerLeftSearchLinks"].catalog-collapse.collapsed #catalogMenuText, .eltBody #HamburgerMenu .nav>li>a[data-target="#headerLeftSearchLinks"] #catalogMenuText  {
-    background: url('/assets/images/1920x/spyglass-desktop-white.png') no-repeat center left;
-    padding: 0 0px 0px 25px;
-    display: block;
-}
-
-.eltBody #HamburgerMenu .nav>li>a[data-target="#headerLeftSearchLinks"].catalog-collapse.collapsed:hover #catalogMenuText, .eltBody #HamburgerMenu .nav>li>a[data-target="#headerLeftSearchLinks"]:hover #catalogMenuText, .eltBody #HamburgerMenu .nav>li>a[data-target="#headerLeftSearchLinks"].catalog-collapse #catalogMenuText{
-	background: url('/assets/images/1920x/spyglass-desktop-black.png') no-repeat center left;
-}
-.eltBody #header_include .navbar .navbar-search a{
-	margin-top: 5px;
-    display: inline-block;
-}
-
-#productDetailsSection {
-	top: 160px;
-}
-#filterMenuMainContainer, #filterSection {
-	top: 157px;
-}
-@media (max-width: 1024px){	
-	.eltBody #header_include {    
-		min-height: 74px;
-	}
-}
-@media screen and (max-width: 991px){
-	#footer_include {
-		bottom:-118px;
-	}
-}
-
-
-/*DCSB2B-3028*/

@@ -76,7 +76,7 @@ html{
 }
 
 #header_include .title a {
-    background: url(../images/NGL-Cengage-Logo-desktop.png) left center no-repeat;
+    background: url(../images/NGL_logo.jpg) left center no-repeat;
     font-size: 0;
     height: 52px;
     left: 0;
@@ -118,11 +118,11 @@ html{
 }
 
 #headerLeftMenu button.btnMenuImg{
-    background: url(../images/btn_menu.png) center no-repeat;
+    background: url(../images/btn_menu.jpg) center no-repeat;
 }
 
 #headerLeftMenu button.btnSearchImg{
-    background: url(../images/btn_search.png) center no-repeat;
+    background: url(../images/btn_search.jpg) center no-repeat;
 }
 
 #header_include .navbar{

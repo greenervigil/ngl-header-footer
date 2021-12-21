@@ -1,6 +1,6 @@
 var loader = loader || (function(){
 	var protocol = location.protocol;
-	var domains = ["cengage.com/search/", "cengage.com/search-authoring/", "cengage.com/sandbox/", "eltngl.com/", "eltngl.com/search/", "eltngl.com/search-authoring/"];
+	var domains = ["cengage.com/search/", "cengage.com/search-authoring/", "cengage.com/sandbox/"];
   var app = false;
   var env;
   var version = "1.2";
@@ -101,7 +101,7 @@ var loader = loader || (function(){
     		    })
     			).done(function(){
     				var CNAME = $.cookie('countryName');
-	          		var CCODE = getCountryCode();
+						var CCODE = $.cookie('P_Country_Code');
 						/*window.dataLayer = window.dataLayer || [];
 						window.dataLayer.push({'countryCode' :CCODE});
 						console.log(window.dataLayer);*/
@@ -139,85 +139,30 @@ var loader = loader || (function(){
   		        });*/
 				
 				function loadSearchMenuItems(){
-					if (catalog.category == "200") {
-						var innerElement ="";
-						$("#headerCatalogLinks").append('<div class="CatalogueListAge col-lg-2 col-md-2 col-sm-3 col-xs-12"> <h2>Courses for... </h2></div>');	
-							$("#headerCatalogLinks").append('<div class="academicSkills CatalogueListType col-lg-3 col-md-3 col-sm-3 col-xs-12"> <h2>Academic Skills </h2></div>');
-							$("#headerCatalogLinks").append('<div class="resources CatalogueListType col-lg-3 col-md-3 col-sm-3 col-xs-12"> <h2>Resources</h2></div>');
-							$("#headerCatalogLinks").append('<div class="nglLink CatalogueListType col-lg-4 col-md-4 col-sm-12 col-xs-12"> </div>');
-							var CatalogueListTypeColumnCount=0;var CatalogueListTypeColumnCount=0;
-							$.each(searchMenuJson, function(key, value){
-							if(typeof value.subMenu === 'undefined'){
-								innerElement =innerElement+ '<a href="'+value.href+'" target="'+value.target+'"><i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i><span class="menuLinksText">'+value.text+'</span></a>';
-							}else if(typeof value.subMenu === 'object'){						
-								
-								$.each(value.subMenu, function(key, subMenuItem){
-									var subMenuListItem = '<a href="'+subMenuItem.href+'" target="'+subMenuItem.target+'"><i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i><span class="menuLinksText">'+subMenuItem.text+'</span></a>';
-									innerElement+=subMenuListItem;
-									
-								});
-							}else{
-								console.log("Invalid data");
-							}
-							
-							if(key < 6){
-								$(".CatalogueListAge").append('<div class="">'+innerElement+'</div>');	
-							} else { 
-							
-							if(key>=6 && key <12) {
-								$(".academicSkills").append('<div>'+innerElement+'</div>');
-							} else if(key>=12 && key <19){
-								$(".resources").append('<div> '+innerElement+'</div>');
-							} 
-							else {
-								$(".nglLink").append('<div>'+innerElement+'</div>');
-							}
-							}
-							/*else{
-								CatalogueListTypeColumnCount++;
-								if((key-4)%6==0){
-									if(key==10){
-										$(".CatalogueListType").append('<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"> '+innerElement+'</div>');
-									}
-									else {
-										$(".CatalogueListType").append('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> '+innerElement+'</div>');
-									}
-									
-								}else {
-									$(".CatalogueListType div:last-child").append(''+innerElement+'');
-								}
-								
-							}*/	
-console.log(CatalogueListTypeColumnCount);
-							innerElement="";
-						});
-						$('#catalogMenuText').text('Search Products');
-					} else {
-						$.each(searchMenuJson, function(key, value){
-							if(typeof value.subMenu === 'undefined'){
-								var innerElement = '<li><a href="'+value.href+'" target="'+value.target+'"><i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i><span class="menuLinksText">'+value.text+'</span></a></li>';
-							}else if(typeof value.subMenu === 'object'){
-								var innerElement = '<li>'+
-														'<a href="javascript:void(0);" data-toggle="collapse" data-target="#subMenuItems" class="subMenuparent collapsed" aria-expanded="false">'+
-															'<i class="fa fa-caret-up menuLinksIcon" aria-hidden="true"></i>'+
-															'<span>'+value.text+'</span>'+
-														'</a>'+
-													'</li>';
-								var subMenuList = '<ul id="subMenuItems" class="collapse no-padding-margin" aria-expanded="false">';
-								$.each(value.subMenu, function(key, subMenuItem){
-									var subMenuListItem = '<li><a href="'+subMenuItem.href+'" target="'+subMenuItem.target+'">'+subMenuItem.text+'</a></li>';
-									subMenuList+=subMenuListItem;
-								});
-								subMenuList+='</ul>';
-							}else{
-								console.log("Invalid data");
-							}
-							$("#headerLeftSearchLinks").append(innerElement);
-							if(typeof subMenuList !== 'undefined'){
-								$("#headerLeftSearchLinks").append(subMenuList);
-							}
-						});
-					}
+					$.each(searchMenuJson, function(key, value){
+						if(typeof value.subMenu === 'undefined'){
+							var innerElement = '<li><a href="'+value.href+'" target="'+value.target+'"><i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i><span class="menuLinksText">'+value.text+'</span></a></li>';
+						}else if(typeof value.subMenu === 'object'){
+							var innerElement = '<li>'+
+													'<a href="javascript:void(0);" data-toggle="collapse" data-target="#subMenuItems" class="subMenuparent collapsed" aria-expanded="false">'+
+														'<i class="fa fa-caret-up menuLinksIcon" aria-hidden="true"></i>'+
+														'<span>'+value.text+'</span>'+
+													'</a>'+
+												'</li>';
+							var subMenuList = '<ul id="subMenuItems" class="collapse no-padding-margin" aria-expanded="false">';
+							$.each(value.subMenu, function(key, subMenuItem){
+								var subMenuListItem = '<li><a href="'+subMenuItem.href+'" target="'+subMenuItem.target+'">'+subMenuItem.text+'</a></li>';
+								subMenuList+=subMenuListItem;
+							});
+							subMenuList+='</ul>';
+						}else{
+							console.log("Invalid data");
+						}
+						$("#headerLeftSearchLinks").append(innerElement);
+						if(typeof subMenuList !== 'undefined'){
+							$("#headerLeftSearchLinks").append(subMenuList);
+						}
+					});
       			}
       				
 				function setHeaderCustomText() {
@@ -225,15 +170,15 @@ console.log(CatalogueListTypeColumnCount);
 					if (catalog.category === '200') {
 					    var nonBRECountries = [ 'AS', 'AW', 'BB', 'BM', 'BO', 'BR', 'BS', 'BZ', 'CN', 'CO', 'CR', 'CU', 'DM', 'DO', 'EC', 'FM', 'GD', 'GF', 'GP', 'GT', 'GU', 'GY', 'HN', 'HT', 'ID', 'JP', 'KH', 'KP', 'KR', 'KY', 'LA', 'MF', 'MH', 'MM', 'MN', 'MP', 'MQ', 'MX', 'NI', 'PA', 'PE', 'PH', 'PM', 'PR', 'PW', 'PY', 'SR', 'SV', 'SX', 'TH', 'TL', 'TV', 'TW', 'UM', 'US', 'VE', 'VI', 'VN', 'WS' ];
 						if ($.inArray(CCODE, nonBRECountries) < 0) {
-								$('.browseCatalogMenuText').text('Browse the Catalogue');
+								$('#catalogMenuText').text('Catalogue');
 						}
 					}
 				}
       			if ( typeof searchMenuJson == "undefined") {
 					if (catalog.category == "200") {
-					  searchMenuJson = JSON.parse('[{"text":"Pre-Primary/Very Young Learners","href":"/assets/html/veryyounglearners/","target":"_self"},{"text":"Primary/Young Learners","href":"/search/showresults.do?N=200&Ntk=NGL&Ntt=younglearnerspromotion","target":"_self"},{"text":"Secondary/Teens","href":"/assets/html/teens/ ","target":"_self"},{"text":"Content-Based English/Literacy","href":"/assets/html/content-based-english/","target":"_self"},{"text":"Adult","href":"/assets/html/adult/","target":"_self"},{"text":"US Adult Ed","href":"/assets/html/usadulted/","target":"_self"},{"text":"Grammar","href":"/assets/html/academic/grammar/","target":"_self"},{"text":"Listening and Speaking","href":"/assets/html/academic/listeningandspeaking/","target":"_self"},{"text":"Reading","href":"/assets/html/academic/reading/","target":"_self"},{"text":"Writing","href":"/assets/html/academic/writing/","target":"_self"},{"text":"Reading and Writing","href":"/assets/html/academic/readingandwriting/","target":"_self"},{"text":"Pronunciation","href":"/assets/html/academic/pronunciation/","target":"_self"},{"text":"Exam Preparation","href":"/search/showresults.do?N=200+4294904737","target":"_self"},{"text":"Graded Readers","href":"/search/showresults.do?N=200+4294892252","target":"_self"},{"text":"Teacher Development","href":"/search/showresults.do?N=200+4294904722","target":"_self"},{"text":"Vocabulary and Idioms","href":"/search/showresults.do?N=200+4294904733","target":"_self"},{"text":"Business English","href":"/search/showresults.do?N=200+4294892253","target":"_self"},{"text":"English for Specific Purposes","href":"/search/showresults.do?N=200+4294904729","target":"_self"},{"text":"Dictionaries","href":"/search/showresults.do?N=200+4294904717","target":"_self"},{"text":"Go here for U.S. PreK-12 Programs","href":"https://ngl.cengage.com/","target":"_self"}]');
+					  searchMenuJson = JSON.parse('[{"text":"Very Young Learners","href":"/search/showresults.do?N=200+4294892239","target":"_self"},{"text":"Young Learners","href":"/search/showresults.do?N=200&Ntk=NGL&Ntt=younglearnerspromotion","target":"_self"},{"text":"Teens","href":"/search/showresults.do?N=200+4294892247","target":"_self"},{"text":"Adult","href":"/search/showresults.do?N=200+4294892255","target":"_self"},{"text":"Grammar","href":"/search/showresults.do?N=200+4294904735","target":"_self"},{"text":"Listening & Speaking","href":"/search/showresults.do?N=200+4294892249","target":"_self"},{"text":"Reading","href":"/search/showresults.do?N=200+4294892248","target":"_self"},{"text":"Writing","href":"/search/showresults.do?N=200+4294892244","target":"_self"},{"text":"Reading & Writing","href":"/search/showresults.do?N=200+4294892242","target":"_self"},{"text":"Dictionaries","href":"/search/showresults.do?N=200+4294904717","target":"_self"},{"text":"Vocabulary & Idioms","href":"/search/showresults.do?N=200+4294904733","target":"_self"},{"text":"Pronunciation","href":"/search/showresults.do?N=200+4294904714","target":"_self"},{"text":"Exam Preparation","href":"/search/showresults.do?N=200+4294904737","target":"_self"},{"text":"Graded Readers","href":"/search/showresults.do?N=200+4294892252","target":"_self"},{"text":"Business English","href":"/search/showresults.do?N=200+4294892253","target":"_self"},{"text":"English for Specific Purposes","href":"/search/showresults.do?N=200+4294904729","target":"_self"},{"text":"Teacher Development","href":"/search/showresults.do?N=200+4294904722","target":"_self"},{"text":"Technology","href":"/search/showresults.do?N=200+4294904722","target":"_self","subMenu":[{"text":"Learn About","href":"/assets/html/tech/","target":"_self"},{"text":"My ELT","href":"/myelt","target":"_self"},{"text":"myNGconnect","href":"https://www.myngconnect.com","target":"_self"},{"text":"eBooks","href":"/assets/html/ebooks/index.html","target":"_self"}]}]');
 					} else if (catalog.category == "201") {
-					  searchMenuJson = JSON.parse('[{"text":"Reading / Language Arts","href":"/search/showresults.do?N=201+4294891966","target":"_self"},{"text":"Science","href":"/search/showresults.do?N=201+4294891945","target":"_self"},{"text":"Social Studies","href":"/search/showresults.do?N=201+4294891961","target":"_self"},{"text":"Mathematics","href":"/search/showresults.do?N=201+4294891878","target":"_self"},{"text":"World Languages","href":"/search/showresults.do?N=201+4294891963","target":"_self"},{"text":"ESL / ELD","href":"/search/showresults.do?N=201+4294891824","target":"_self"},{"text":"Pathways","href":"/nglpathways","target":"_self"},{"text":"Advanced, Honors, and Electives","href":"/assets/html/ae/","target":"_self"},{"text":"Career and Technical Education","href":"/assets/html/cte/","target":"_self"},{"text":"Disciplinary Literacy","href":"/search/showresults.do?N=201+4294891794","target":"_self"},{"text":"Leveled Book Finder","href":"/bookfinder","target":"_self"},{"text":"Dual Language","href":"/showresults.do?N=201+4294891797","target":"_self"},{"text":"Professional Development","href":"/professionaldevelopment","target":"_self"}]');
+					  searchMenuJson = JSON.parse('[{"text":"Reading / Language Arts","href":"https://ngl.cengage.com/search/showresults.do?N=201+4294891966","target":"_self"},{"text":"Science","href":"https://ngl.cengage.com/search/showresults.do?N=201+4294891945","target":"_self"},{"text":"Social Studies","href":"https://ngl.cengage.com/search/showresults.do?N=201+4294891961","target":"_self"},{"text":"Mathematics","href":"https://ngl.cengage.com/search/showresults.do?N=201+4294891878","target":"_self"},{"text":"World Languages","href":"https://ngl.cengage.com/search/showresults.do?N=201+4294891963","target":"_self"},{"text":"ESL / ELD","href":"https://ngl.cengage.com/search/showresults.do?N=201+4294891824","target":"_self"},{"text":"Pathways","href":"https://ngl.cengage.com/nglpathways","target":"_self"},{"text":"Advanced, Honors, and Electives","href":"https://ngl.cengage.com/assets/html/ae/","target":"_self"},{"text":"Career and Technical Education","href":"https://ngl.cengage.com/assets/html/cte/","target":"_self"},{"text":"Disciplinary Literacy","href":"https://ngl.cengage.com/search/showresults.do?N=201+4294891794","target":"_self"},{"text":"Leveled Book Finder","href":"https://ngl.cengage.com/bookfinder","target":"_self"},{"text":"Dual Language","href":"https://ngl.cengage.com/search/showresults.do?N=201+4294891797","target":"_self"},{"text":"Professional Development","href":"https://ngl.cengage.com/professionaldevelopment","target":"_self"}]');
 					}
 				}
 
@@ -248,10 +193,6 @@ console.log(CatalogueListTypeColumnCount);
 			  
 			  setHeaderCustomText();
 			  loadSearchMenuItems();
-			  
-			  // DCSB2B-968 : Favico link added to head
-			  $('head').append('<link rel="icon" type="image/x-icon" href="https://assets-cdn.nationalgeographic.com/natgeo/static/icons/favicon.ico">');
-			  
 			  
   /*var nowDate = new Date();
   var cssVersion = nowDate.getFullYear()+''+(nowDate.getMonth()+1)+nowDate.getDate()+nowDate.getHours();  
@@ -342,28 +283,7 @@ console.log(CatalogueListTypeColumnCount);
   		            window.location.href = url;
   		            event.stopPropagation();
   		        });
-    		    /*Detecting mobile for elt site  */
-				if (catalog.category == "200") {
-					var detectWidth=$(window).width() ;
-					var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-					if(detectWidth <= 1007 || (isMobile && detectWidth <= 1024)){
-						$('#header_include').addClass('mobileMenuView');
-						$('.mobileMenuView #HamburgerMenu').removeClass('collapse').removeClass('navbar-collapse');		
-						$('.mobileMenuView a[data-target="#headerLeftSearchLinks"] #catalogMenuText').text('Search');
-						$('.mobileMenuView #HamburgerMenu').hide();
-					}
-					else {
-						$('#header_include').removeClass('mobileMenuView');
-						$('#HamburgerMenu').addClass('navbar-collapse');
-						$('a[data-target="#headerLeftSearchLinks"] #catalogMenuText').text('Search Products');
-					}
-					if(!($('#header_include').hasClass('mobileMenuView'))){
-						$('.mainSearchMenuGA.collapse').removeAttr('style');			
-					}else {
-						$('#headerCatalogLinks').hide();
-					}
-				}	
-				/*Detecting mobile for elt site  */	  
+    		        
     		      if( typeof callback != 'undefined') {
 						    callback();
 					    }
@@ -382,10 +302,9 @@ console.log(CatalogueListTypeColumnCount);
     		/*).done(function(){*/
           
       		$(document).ready(function(){
-            	var catalog = getCatalogObject();
+            var catalog = getCatalogObject();
 	        	var CNAME = $.cookie('countryName');
-	          	var CCODE = getCountryCode();
-
+	          var CCODE = $.cookie('P_Country_Code');
 	        	$("#footer_include").load(protocol + "//" + env + "cdn.cengage.com/static/sites/ngl/" + catalog.footerPath + "-footer.html", function () {
 			        //Capture the Country Country Code to display in the footer
 			        if(CCODE != null){
@@ -398,7 +317,6 @@ console.log(CatalogueListTypeColumnCount);
 								callback();
 							}
 			    	});
-			    	continueUrl();
       		});
       	/*});*/
       	return this;
@@ -468,178 +386,6 @@ console.log(CatalogueListTypeColumnCount);
     }
     return catalog;
   }
-
-  function getCountryCode() {
-		var countryCode;
-        if ($.cookie("P_Country_Cd")) {
-            countryCode = $.cookie("P_Country_Cd");
-        } else {
-            $.post("https://" + env + "ngl.cengage.com/search/geocountrylocator",
-                {},
-                function (data, status) {
-                    countryCode = data.country;
-                    $.cookie("P_Country_Cd", countryCode, { path: "/;secure", expires: 0 });
-                });
-        }
-        return countryCode;
-    }
-
   
-   function continueUrl(){
-	   $(".eltBuyBox a").each(function(){
-			if($(this).attr('href').indexOf("www.cengage.com/shop") > -1 || $(this).attr('href').indexOf("www.cengage.ca/shop") > -1) {
-				if($(this).attr('href').indexOf("?") > -1) {
-					$(this).attr('href', $(this).attr('href') + "&continueUrl=" + escape(location.href).replace(/\//g, '%2F'));
-				} else {
-					$(this).attr('href', $(this).attr('href') + "?continueUrl=" + escape(location.href).replace(/\//g, '%2F'));
-				}
-			}
-		});
-		$(".searchSingleItemButtonContainer a").each(function(){
-			if($(this).attr('href').indexOf("www.cengage.com/shop") > -1 || $(this).attr('href').indexOf("www.cengage.ca/shop") > -1) {
-				if($(this).attr('href').indexOf("?") > -1) {
-					$(this).attr('href', $(this).attr('href') + "&continueUrl=" + escape(location.href).replace(/\//g, '%2F'));
-				} else {
-					$(this).attr('href', $(this).attr('href') + "?continueUrl=" + escape(location.href).replace(/\//g, '%2F'));
-				}
-			}
-		});
-   }
+
 }());
-
-//DCSRUN-117 NGL ELT Header navigation 
-
-
-if ($('body').hasClass('eltBody') ) {	
-	console.log('catalog.category: '+$('body').hasClass('eltBody'))
-	window.onresize = function() {
-	console.log('resize');
-	
-		var detectWidth=$(window).width();
-		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		if(detectWidth <= 1007 || (isMobile && detectWidth <= 1024)){
-			
-			$('#header_include').addClass('mobileMenuView');
-			$('.mobileMenuView #HamburgerMenu').removeClass('collapse').removeClass('navbar-collapse');		
-			$('.mobileMenuView a[data-target="#headerLeftSearchLinks"] #catalogMenuText').text('Search');
-			//mobileMenuView .menu_contact_sales a').text('Contact Sales Representative');
-			$('.mobileMenuView a[data-target="#headerCatalogLinks"]').removeClass('flyoutSubmenu');
-		}
-		else {
-			
-			$('#HamburgerMenu').css('display','block');						
-			$('#header_include').removeClass('mobileMenuView');
-			$('#HamburgerMenu').addClass('navbar-collapse');
-			$('a[data-target="#headerLeftSearchLinks"] #catalogMenuText').text('Search Products');
-			//$('.menu_contact_sales a').text('Contact Sales Rep');
-			$('a[data-target="#headerCatalogLinks"]').addClass('flyoutSubmenu');
-		}
-		
-		if(!($('#header_include').hasClass('mobileMenuView'))){
-			$('.mainSearchMenuGA.collapse').removeAttr('style');			
-		}else {
-			$('#headerCatalogLinks').hide();
-		}
-};
-
-
-
-
-$(document).ready(function(){
-	$('body').on('click', '.mobileMenuView span.closeSubnav', function(e){
-		e.stopPropagation();
-		var target=$(this).parents('ul.mainSearchMenuGA').attr('id');					
-		$('#'+target+'').animate({'width': 'toggle'});	
-	});
-	$('body').on('click','.mobileMenuView #HamburgerMenu ul li a', function(e){						
-		e.stopPropagation();
-		var selector= $(this).attr('data-target');
-		$(selector).animate({'width':'toggle'});
-		$('.mobileMenuView ul.mainSearchMenuGA').each(function(){
-			if(selector.indexOf($(this).attr('id'))==-1) {
-			if($(this).css('display')=="block") {
-				$(this).css('display','none');
-			}
-			}
-		});
-	});
-	$('body').on('click','.mobileMenuView #headerLeftMenu button[data-target="#HamburgerMenu"]', function(e){
-		e.stopPropagation();
-		var firstTimeclick=false;
-		if($('.mobileMenuView #HamburgerMenu').hasClass('navbar-collapse')){
-			$('.mobileMenuView #HamburgerMenu').removeClass('collapse').removeClass('navbar-collapse');		
-			firstTimeclick= true;							
-		}
-		if(!firstTimeclick){
-		$('.mobileMenuView #HamburgerMenu').removeClass('collapse').removeClass('navbar-collapse');						
-		$('.mobileMenuView #HamburgerMenu').animate({'width':'toggle' });
-		$('.mobileMenuView ul.mainSearchMenuGA').each(function(){
-			if($(this).css('display')=="block") {
-				$(this).animate({'width':'toggle'});
-			}
-		});
-		}
-	});
-	
-	$('body').on('click','.mobileMenuView #headerLeftMenu a[data-target="#headerLeftSearchLinks"]', function(e){
-		e.stopPropagation();
-		if($('.mobileMenuView #HamburgerMenu').css('display')=="block"){
-			$('.mobileMenuView #HamburgerMenu').animate({'width':'toggle' });
-		}
-		
-		$('.mobileMenuView #headerLeftSearchLinks').animate({'width':'toggle'});
-	});
-	
-	
-	
-	$('body').on('click','.mobileMenuView span.closeMainMenu', function(e){
-		e.stopPropagation();
-		$('.mobileMenuView #HamburgerMenu').animate({'width':'toggle'});
-	});
-	
-	/*DCSB2B-3028- Hover Functionality on browse online catalog menu*/
-	var subMenu_Open=false;
-	$('body').on('mouseenter','#headerCatalogLinks', function(){
-		subMenu_Open=true;
-	});
-	/*$('body').on('mouseenter','.flyoutSubmenu', function(){
-		subMenu_Open=true;
-		$('.flyoutSubmenu').addClass('subMenuOpen');
-		$('#headerCatalogLinks').addClass('in');
-	});*/
-	
-	$('body').on('mouseenter','ul.mainMenuGA li a', function(){
-		if($(this).hasClass('flyoutSubmenu')){
-			subMenu_Open=true;
-			$('.flyoutSubmenu').addClass('subMenuOpen');
-			$('#headerCatalogLinks').addClass('in');
-		}
-		else {
-			subMenu_Open=false;
-			$('.flyoutSubmenu').removeClass('subMenuOpen');
-			$('#headerCatalogLinks').removeClass('in');
-		}
-	});
-	$('body').on('mouseleave','.flyoutSubmenu', function(){
-		if(!subMenu_Open){
-		$('.flyoutSubmenu').removeClass('subMenuOpen');
-		$('#headerCatalogLinks').removeClass('in');
-		}
-	});
-
-	$('body').on('mouseleave','#headerCatalogLinks.in', function(){
-		subMenu_Open=false;
-		$('.flyoutSubmenu').removeClass('subMenuOpen');
-		$(this).removeClass('in');
-	});
-	/*DCSB2B-3028- Hover Functionality on browse online catalog menu*/
-
-});
-
-
-}
-
-
-
-
-//DCSRUN-117 NGL ELT Header navigation End

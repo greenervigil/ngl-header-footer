@@ -1,0 +1,304 @@
+<script>
+	function trim(stringValue){
+		return stringValue.replace( /^\s*/, "" ).replace( /\s*$/, "" );
+	}
+
+	function validateAndSubmit() {
+	    var userName = trim(document.getElementById("email").value);
+	    var password =  trim(document.getElementById("password").value);
+
+		if(userName.length == 0) {
+			alert('Please enter valid User Name');
+		} else if(password.length == 0) {
+			alert('Please enter valid Password');
+		}
+	    if(userName.length >0 && password.length >0) {
+			var formObj = document.getElementById("loginForm");
+			formObj.submit();
+		}
+
+	}
+    $(document).ready(function(){
+      $(".dropdown").dropdown();
+    });
+</script>
+<div class="container">
+  <h1 class="title">
+    <a href="//ngl.cengage.com"><span></span>National Geographic Learning</a>
+  </h1>
+  <a class="course-specific-websites" href="//ngl.cengage.com/access/">Resource Websites <span class="double-arrow-right">&raquo;</span></a>
+  <ul class="support-links">
+    <li><a href="/support/">Tech Support</a></li>
+    <li><a href="/contact/index.html">Contact</a></li>
+    <li><a href="//sites.cengage.com/RepFinder/search/natgeo"><strong>Rep Finder</strong></a></li>
+  </ul>
+  <div id="ngl-header-search" class="dropdown">
+    <form id="ngl-search" class="dropdown-toggle textBox" name="CenSearch" target="_parent" method="post" _lpchecked="1">
+      <input type="hidden" id="N" name="N" value="185+4294918800">
+      <label for="search_text"> Search entire catalog by author, title, keyword or ISBN </label>
+      <input type="text" id="Ntk" name="Ntk" value="NGL">
+      <input type="text" maxlength="60" id="search_text" name="Ntt" autocomplete="off" size="50" placeholder="Search entire catalog by author, title, keyword or ISBN">
+      <label for="submit_button_header"> Search </label>
+      <input type="button" id="submit_button_header" value="" name="headersearch" class="search_searchBtnHead">
+    </form>
+    <div class="dropdown-menu">
+      <h1 id="select-catalog">Please Select:</h1>
+      <ul>
+        <li><label for="esl-elt"><input type="radio" id="esl-elt" value="200" name="0">ESL/ELT</label></li>
+        <li><label for="prek-8"><input type="radio" id="prek-8" value="205" name="0">Grades PreK-8</label></li>
+        <li><label for="9-12"><input type="radio" id="9-12" value="206" name="0">Grades 9-12</label></li>
+      </ul>
+    </div><!-- END DROPDOWN-MENU -->
+  </div><!-- END DROPDOWN -->
+</div><!-- END CONTAINTER -->
+<div class="navigation">
+  <nav class="container">
+    <ul class="level-1">
+<!-- ------- -->
+<!-- ESL/ELT -->
+<!-- ------- -->
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">ESL/ELT <i class="icon-double-angle-down"></i></a>
+        <ul class="dropdown-menu level-2">
+          <li><a href="//ngl.cengage.com/search/showresults.do?N=200">Home</a>|</li>
+          <li><a href="//ngl.cengage.com/news">News &amp; Events</a>|</li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Teacher Development  <i class="icon-double-angle-down"></i></a>|
+            <ul class="dropdown-menu level-3">
+              <li><a href="//ELTeach.com" target="_blank">ELTeach</a></li>
+              <li><a href="//ngl.cengage.com/eltadvantage" target="_blank">ELT Advantage</a></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=200+4294904722">Related Materials</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#">Our Technology  <i class="icon-double-angle-down"></i></a>|
+            <ul class="dropdown-menu level-3">
+              <li><a href="//ngl.cengage.com/assets/html/tech/">Learn About</a></li>
+              <li><a href="//ngl.cengage.com/myelt" target="_blank">MyELT</a></li>
+              <li><a href="//myNGconnect.com" target="_blank">MyNGConnect</a></li>
+              <li><a href="//ngl.cengage.com/assets/html/ebooks/index2.html">eBooks</a></li>
+            </ul>
+          </li>
+          <li><a href="//ngl.cengage.com/contact/contact_elt.html">Where to Order</a></li>
+        </ul>
+      </li>
+<!-- ------------- -->
+<!-- Grades PreK-8 -->
+<!-- ------------- -->
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Grades PreK-8 <i class="icon-double-angle-down"></i></a>
+        <ul class="dropdown-menu level-2">
+          <li><a href="//ngl.cengage.com/search/showresults.do?N=205">Home</a>|</li>
+          <li>
+            <a class="dropdown-toggle" href="#">Programs <i class="icon-double-angle-down"></i></a>|
+            <ul class="dropdown-menu level-3">
+              <li>
+                <ul style="float:left;">
+                  <li><h3>Content Area</h3></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294904751">Reading / Language Arts</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294904700">Science</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294904719">Social Studies</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294904748">ESL / ELD</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294904702">Spanish Language &amp; Literacy</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294967210">Professional Development</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294904716">Reference Books</a></li>
+                  <li class="divider"></li>
+                  <li><a href="//ngl.cengage.com/assets/html/ccss/index.html">Common Core</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/ngss/index.html">NGSS</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/stem/index.html">STEM</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/explorers/index.html">National Geographic Explorers</a></li>
+                  <li><a href="//ngl.cengage.com/exploringscience">Exploring Science</a></li>
+                  <li><a href="//ngl.cengage.com/ladders">National Geographic Ladders</a></li>
+                </ul>
+                <ul style="float:left;">
+                  <li><h3>Recommended For</h3></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294905502">Gifted &amp; Talented</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294905693">Special Education</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294905691">Striving Readers</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294905500">Bilingual Education</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294905690">English Language Learners</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294905501">Dual Language</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294905692">Intervention</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294905499">RTI</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294905504">School Improvement</a></li>
+                  <li><a href="//ngl.cengage.com/search/showresults.do?N=205+4294918364">Summer School</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="//ngl.cengage.com/assets/html/digital/">Digital Solutions</a>|</li>
+          <li><a href="//ngl.cengage.com/correlations/">Correlations</a>|</li>
+          <li><a href="//ngl.cengage.com/search/programOverview.do?N=205&Ntk=P_EPI&Ntt=249731028141381117910165985891061679804">Professional Development</a>|</li>
+          <li><a href="//ngl.cengage.com/correlations/research/">Research</a>|</li>
+          <li>
+            <a class="dropdown-toggle" href="#">State Resources <i class="icon-double-angle-down"></i></a>|
+            <ul class="dropdown-menu level-3 state-resources">
+              <li>
+                <ul style="float:left;">
+                  <li><a href="//ngl.cengage.com/assets/html/states/al/">Alabama</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ak/">Alaska</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/az/">Arizona</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ar/">Arkansas</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ca/">California</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/co/">Colorado</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ct/">Connecticut</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/de/">Delaware</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/fl/">Florida</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ga/">Georgia</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/hi/">Hawaii</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/id/">Idaho</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/il/">Illinois</a></li>
+                </ul>
+                <ul style="float:left;">
+                  <li><a href="//ngl.cengage.com/assets/html/states/in/">Indiana</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ia/">Iowa</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ks/">Kansas</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ky/">Kentucky</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/la/">Louisiana</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/me/">Maine</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/md/">Maryland</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ma/">Massachusetts</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/mi/">Michigan</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/mn/">Minnesota</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ms/">Mississippi</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/mo/">Missouri</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/mt/">Montana</a></li>
+                </ul>
+                <ul style="float:left;">
+                  <li><a href="//ngl.cengage.com/assets/html/states/ne/">Nebraska</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nv/">Nevada</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nh/">New Hampshire</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nj/">New Jersey</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nm/">New Mexico</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ny/">New York</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nc/">North Carolina</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nd/">North Dakota</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/oh/">Ohio</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ok/">Oklahoma</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/or/">Oregon</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/pa/">Pennsylvania</a></li>
+                </ul>
+                <ul style="float:left;">
+                  <li><a href="//ngl.cengage.com/assets/html/states/ri/">Rhode Island</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/sc/">South Carolina</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/sd/">South Dakota</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/tn/">Tennessee</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/tx/">Texas</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ut/">Utah</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/vt/">Vermont</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/va/">Virginia</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/wa/">Washington</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/wv/">West Virginia</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/wi/">Wisconsin</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/wy/">Wyoming</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li><!-- End State Resources -->
+          <li><a href="//nxtbook.com/nxtbooks/ngsp/prek-12_1415/">Catalog</a></li>
+        </ul>
+      </li><!-- End PreK-8 -->
+<!-- ----------- -->
+<!-- Grades 9-12 -->
+<!-- ----------- -->
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Grades 9-12 <i class="icon-double-angle-down"></i></a>
+        <ul class="dropdown-menu level-2">
+          <li><a href="//ngl.cengage.com/search/showresults.do?N=206">Home</a>|</li>
+          <li>
+            <a class="dropdown-toggle" href="#">Programs <i class="icon-double-angle-down"></i></a>|
+            <ul class="dropdown-menu level-3">
+              <li><h3>Content Area</h3></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=206+4294922413+4294922373">Agriculture</a></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=206+4294922239">Business and Economics</a></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=206+4294967103">Career Education</a></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=206+4294922389">Computing &amp; Information Technology</a></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=206+4294904748">ESL/ELD</a></li>
+              <li><a href="//ngl.cengage.com/healthscience">Health Science</a></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=206+4294922390">Humanities & Social Sciences</a></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=206+4294922413">Mathematics & Science</a></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=206+4294904751">Reading & Language Arts</a></li>
+              <li><a href="//ngl.cengage.com/search/showresults.do?N=206+4294922323">Trades</a></li>
+              <li class="divider"></li>
+              <li><a href="//ngl.cengage.com/assets/html/ae/index.html">Advanced, Honors and Electives</a></li>
+              <li><a href="//ngl.cengage.com/ctecourseguides">Career &amp; Technical Education</a></li>
+              <li><a href="//ngl.cengage.com/assets/html/ccss/index.html">Common Core</a></li>
+              <li><a href="//ngl.cengage.com/assets/html/stem/index.html">STEM</a></li>
+              <li><a href="//ngl.cengage.com/assets/html/explorers/index.html?">National Geographic Explorers</a></li>
+            </ul>
+          </li>
+          <li><a href="//ngl.cengage.com/assets/html/digital/">Digital Solutions</a>|</li>
+          <li><a href="//ngl.cengage.com/correlations/">Correlations</a>|</li>
+          <li><a href="//ngl.cengage.com/search/programOverview.do?N=206&Ntk=P_EPI&Ntt=249731028141381117910165985891061679804">Professional Development</a>|</li>
+          <li><a href="//ngl.cengage.com/correlations/research/">Research</a>|</li>
+          <li>
+            <a class="dropdown-toggle" href="#">State Resources <i class="icon-double-angle-down"></i></a>|
+            <ul class="dropdown-menu level-3 state-resources">
+              <li>
+                <ul style="float:left;">
+                  <li><a href="//ngl.cengage.com/assets/html/states/al/">Alabama</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ak/">Alaska</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/az/">Arizona</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ar/">Arkansas</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ca/">California</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/co/">Colorado</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ct/">Connecticut</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/de/">Delaware</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/fl/">Florida</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ga/">Georgia</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/hi/">Hawaii</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/id/">Idaho</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/il/">Illinois</a></li>
+                </ul>
+                <ul style="float:left;">
+                  <li><a href="//ngl.cengage.com/assets/html/states/in/">Indiana</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ia/">Iowa</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ks/">Kansas</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ky/">Kentucky</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/la/">Louisiana</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/me/">Maine</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/md/">Maryland</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ma/">Massachusetts</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/mi/">Michigan</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/mn/">Minnesota</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ms/">Mississippi</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/mo/">Missouri</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/mt/">Montana</a></li>
+                </ul>
+                <ul style="float:left;">
+                  <li><a href="//ngl.cengage.com/assets/html/states/ne/">Nebraska</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nv/">Nevada</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nh/">New Hampshire</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nj/">New Jersey</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nm/">New Mexico</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ny/">New York</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nc/">North Carolina</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/nd/">North Dakota</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/oh/">Ohio</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ok/">Oklahoma</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/or/">Oregon</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/pa/">Pennsylvania</a></li>
+                </ul>
+                <ul style="float:left;">
+                  <li><a href="//ngl.cengage.com/assets/html/states/ri/">Rhode Island</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/sc/">South Carolina</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/sd/">South Dakota</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/tn/">Tennessee</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/tx/">Texas</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/ut/">Utah</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/vt/">Vermont</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/va/">Virginia</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/wa/">Washington</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/wv/">West Virginia</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/wi/">Wisconsin</a></li>
+                  <li><a href="//ngl.cengage.com/assets/html/states/wy/">Wyoming</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li><!-- End State Resources -->
+          <li><a href="//nxtbook.com/nxtbooks/ngsp/prek-12_1415/">Catalog</a></li>
+        </ul>
+      </li><!-- End 9-12 -->
+    </ul>
+  </nav>
+</div><!-- END NAVIGATION -->

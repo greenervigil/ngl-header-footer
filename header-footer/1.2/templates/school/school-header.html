@@ -6,7 +6,7 @@
 </style>
 <script type="text/javascript">	
 	env = 'd-';
-	var ImgPath = protocol + "//" + env + "cdn.cengage.com/static/sites/ngl/header-footer/"+version+"/images/";
+	let ImgPath = protocol + "//" + env + "cdn.cengage.com/static/sites/ngl/header-footer/"+version+"/images/";
 	
 	$(document).ready(function() {    
     	checkSize('#NGLSchoolImg','NGL_HED_logo');    
@@ -17,19 +17,19 @@
 	});
 
 	function checkSize(imgId, imgName){
-		var schoolHeaderLogo;
+		let schoolHeaderLogo;
 		if (window.matchMedia('(min-width: 992px)').matches){
-			var schoolHeaderLogo = ImgPath+imgName+'-desktop.png';			
+			schoolHeaderLogo = ImgPath+imgName+'-desktop.png';			
 		}else if (window.matchMedia('(max-width: 767px)').matches){
-			var schoolHeaderLogo = ImgPath+imgName+'-mobile.png';
+			schoolHeaderLogo = ImgPath+imgName+'-mobile.png';
 		}else{
-			var schoolHeaderLogo = ImgPath+imgName+'-tablet.png';
+			schoolHeaderLogo = ImgPath+imgName+'-tablet.png';
 		}
 
 		$(imgId).attr('src',schoolHeaderLogo);
 	}
 	function setBtnImg(imgId, imgName){
-		var menuBtnImg = ImgPath+imgName;			
+		let menuBtnImg = ImgPath+imgName;			
 		$(imgId).css('background-image','url(' +menuBtnImg+ ')');
 	}
 
@@ -37,33 +37,41 @@
 <div class="mainPageContainer">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-xs-8 col-sm-5 col-md-4 col-lg-2 logoMobWidth">
+			<div class="col-xs-2 col-sm-3 col-md-2 col-lg-2">
 				<div class="title">
 					<a href="//ngl.cengage.com">
 						<img src="" alt="National Geographic Learning" id="NGLSchoolImg">
 					</a>
 				</div>
 			</div>
-			<div class="col-xs-1 col-sm-3 col-md-4 col-lg-8 marketTitleMobWidth">
-				<div class="market-title largeTitle">Grades K-12</div>
-				<div class="market-title smallTitle">K12</div>
+			<div class="col-xs-5 col-sm-7 col-md-8 col-lg-8">
+				<div class="market-title largeTitle" style="font-weight: 700; padding-top: 25px;">Grades K-12</div>
+				<div class="market-title smallTitle" style="font-weight: 700; padding-top: 30px;">K12</div>
 			</div>
-			<div class="col-xs-3 col-sm-4 col-md-4 col-lg-2" id="headerLeftMenu">
+			<div class="col-xs-3 col-sm-2 col-md-1 col-md-offset-1 col-lg-1" id="headerLeftMenu">
 				<nav class="navbar" role="navigation">
 					<!--<div class="navbar-header" id="headerSearchContainer">-->
 						<button type="button" style="background-color: #FFFFFF"
 							data-toggle="collapse" data-target="#headerLeftSearchLinks">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-								fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+								fill="#000000" class="bi bi-search" viewBox="0 0 16 16">
 								<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
 							</svg>
 						</button>
 					<!--</div>
 					<div class="navbar-header" id="headerMenuContainer">-->
 						<button type="button" style="background-color: #FFFFFF" data-toggle="collapse" data-target="#headerLeftMenuLinks">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-								fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-								<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+							<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<title>menu</title>
+								<defs>
+									<path d="M3.99999996,18 L20,18 C20.55,18 21,17.55 21,17 C21,16.45 20.55,16 20,16 L3.99999996,16 C3.44999996,16 2.99999996,16.45 2.99999996,17 C2.99999996,17.55 3.44999996,18 3.99999996,18 Z M3.99999996,13 L20,13 C20.55,13 21,12.55 21,12 C21,11.45 20.55,11 20,11 L3.99999996,11 C3.44999996,11 2.99999996,11.45 2.99999996,12 C2.99999996,12.55 3.44999996,13 3.99999996,13 Z M2.99999996,6.99999998 C2.99999996,7.54999998 3.44999996,7.99999998 3.99999996,7.99999998 L20,7.99999998 C20.55,7.99999998 21,7.54999998 21,6.99999998 C21,6.44999998 20.55,5.99999998 20,5.99999998 L3.99999996,5.99999998 C3.44999996,5.99999998 2.99999996,6.44999998 2.99999996,6.99999998 Z" id="path-1"></path>
+								</defs>
+								<g id="menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<mask id="mask-2" fill="white">
+										<use xlink:href="#path-1"></use>
+									</mask>
+									<use id="Combined-Shape" fill="#000000" xlink:href="#path-1"></use>
+								</g>
 							</svg>
 						</button>
 					<!--</div>-->

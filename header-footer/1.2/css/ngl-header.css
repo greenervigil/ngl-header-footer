@@ -148,7 +148,6 @@ html{
 #header_include .navbar-nav>li {
     float: none;
     z-index: 1;
-    margin-top: 2px;
 }
 
 #header_include .headerLeftMenuSubmenu.navbar-collapse{
@@ -157,18 +156,13 @@ html{
 
 /*------------ Header Menu  ----------------------- */
 #headerLeftMenuLinks>li {
-	border-width: 1px;
-	border-color: rgb(255, 255, 255);
-	border-style: solid;
-	border-radius: 3px;
-	background-color: rgb(102, 102, 102);
-	height: 42px;
+	background-color: rgb(255,255,255);
     cursor: pointer;
 }
 
 #headerLeftMenuLinks{
     /*height: 270px !important;*/
-    max-height: 440px;
+    max-height: 350px;
     overflow-y: auto!important;
 }
 
@@ -178,8 +172,8 @@ html{
 }*/
 
 #headerLeftMenuLinks>li a {
-	font-size: 16px;
-    color: rgb(255, 255, 255);
+	font-size: 14px;
+    color: #000;
     line-height: 1.4;
     text-align: left;
     padding: 8px;
@@ -188,12 +182,8 @@ html{
     cursor: pointer;
 }
 
-#headerLeftMenuLinks>li:first-child{
-    background-color: #941600;
-}
-
 #headerLeftMenuLinks>li:hover,#headerLeftMenuLinks>li:focus,#headerLeftMenuLinks>li>a:hover, #headerLeftMenuLinks>li>a:focus{
-    background-color: rgb(102, 102, 102);
+    background-color: #bfbfbf;
 }
 
 #headerLeftMenuLinks>li:first-child:hover, #headerLeftMenuLinks>li:first-child a:hover,

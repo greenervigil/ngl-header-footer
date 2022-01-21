@@ -148,11 +148,11 @@ var loader = loader || (function(){
 							var CatalogueListTypeColumnCount=0;var CatalogueListTypeColumnCount=0;
 							$.each(searchMenuJson, function(key, value){
 							if(typeof value.subMenu === 'undefined'){
-								innerElement =innerElement+ '<a href="'+value.href+'" target="'+value.target+'"><i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i><span class="menuLinksText">'+value.text+'</span></a>';
+								innerElement =innerElement+ '<a href="'+value.href+'" target="'+value.target+'"><span class="menuLinksText">'+value.text+'</span></a>';
 							}else if(typeof value.subMenu === 'object'){						
 								
 								$.each(value.subMenu, function(key, subMenuItem){
-									var subMenuListItem = '<a href="'+subMenuItem.href+'" target="'+subMenuItem.target+'"><i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i><span class="menuLinksText">'+subMenuItem.text+'</span></a>';
+									var subMenuListItem = '<a href="'+subMenuItem.href+'" target="'+subMenuItem.target+'"><span class="menuLinksText">'+subMenuItem.text+'</span></a>';
 									innerElement+=subMenuListItem;
 									
 								});
@@ -195,11 +195,10 @@ console.log(CatalogueListTypeColumnCount);
 					} else {
 						$.each(searchMenuJson, function(key, value){
 							if(typeof value.subMenu === 'undefined'){
-								var innerElement = '<li><a href="'+value.href+'" target="'+value.target+'"><i class="fa fa-caret-up menuLinksIcon visibilityHidden" aria-hidden="true"></i><span class="menuLinksText">'+value.text+'</span></a></li>';
+								var innerElement = '<li><a href="'+value.href+'" target="'+value.target+'"><span class="menuLinksText">'+value.text+'</span></a></li>';
 							}else if(typeof value.subMenu === 'object'){
 								var innerElement = '<li>'+
 														'<a href="javascript:void(0);" data-toggle="collapse" data-target="#subMenuItems" class="subMenuparent collapsed" aria-expanded="false">'+
-															'<i class="fa fa-caret-up menuLinksIcon" aria-hidden="true"></i>'+
 															'<span>'+value.text+'</span>'+
 														'</a>'+
 													'</li>';

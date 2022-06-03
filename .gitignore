@@ -1,3 +1,5 @@
 # Folder view configuration files
+.vscode/ 
+
 .DS_Store
 
